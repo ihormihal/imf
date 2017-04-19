@@ -1,0 +1,16 @@
+.loader {
+	position: relative;
+	&.load {
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 30%;
+			left: 0;
+			top: 0;
+			height: 3px;
+			background-color: $colorPrimary;
+			animation: ticker 1s linear infinite;
+		}
+	}
+}
