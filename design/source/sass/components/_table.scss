@@ -68,6 +68,13 @@ table {
 	overflow-x: auto;
 }
 
+.datatable {
+	@extend table.noborder;
+	@extend table.striped;
+	@extend table.hoverable;
+	width: 100%;
+}
+
 //MOBILE RESPONSIVE TABLE
 @media screen and (max-width: 480px) {
   .table-mobile {
