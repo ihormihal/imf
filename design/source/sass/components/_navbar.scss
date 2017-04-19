@@ -15,6 +15,25 @@ $navBtnSize: 20px;
 	&.slide-left {
 		transform: translate(-100%,0);
 	}
+	
+	&.opened {
+		visibility: visible;
+		box-shadow: 0px 2px 7px rgba(0,0,0,0.4);
+		transform: translate(0%,0);
+		& + .page-overlay {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1100;
+			background-color: rgba(0,0,0,0.5);
+		}
+	}
+}
+
+.nav-side {
 	.nav.nav-col li {
 		&.parent {
 			position: relative;
@@ -65,37 +84,24 @@ $navBtnSize: 20px;
 			margin-left: $gap;
 		}
 	}
-	&.opened {
-		visibility: visible;
-		box-shadow: 0px 2px 7px rgba(0,0,0,0.4);
-		transform: translate(0%,0);
-		& + .page-overlay {
-			content: '';
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 1100;
-			background-color: rgba(0,0,0,0.5);
+
+	&.nav-dark {
+		background-color: color(dark);
+		.ink {
+			background-color: #fff;
 		}
+		.nav.nav-col > li {
+			border-bottom: 1px solid #444;
+			&:first-child {
+				border-top: 1px solid #444;
+			}
+			i { margin-right: $gap; }
+		}
+
 	}
 }
 
-.nav-dark {
-	background-color: color(dark);
-	.ink {
-		background-color: #fff;
-	}
-	.nav.nav-col > li {
-		border-bottom: 1px solid #444;
-		&:first-child {
-			border-top: 1px solid #444;
-		}
-		i { margin-right: $gap; }
-	}
 
-}
 
 //TOPNAV
 .topnav {
