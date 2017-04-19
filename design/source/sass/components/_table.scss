@@ -71,7 +71,6 @@ table {
 .datatable {
 	@extend table.noborder;
 	@extend table.striped;
-	@extend table.hoverable;
 	width: 100%;
 }
 
