@@ -75,6 +75,9 @@ $navBtnSize: 20px;
 			color: #fff;
 			text-transform: uppercase;
 		}
+		&.active a {
+			background-color: $colorPrimary;
+		}
 		.btn {
 			margin: $gap/2 $gap;
 			display: inline-block;
