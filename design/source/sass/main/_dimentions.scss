@@ -48,6 +48,10 @@
 }
 //POSITION CLASSES
 .fixed, .absolute {
+	&.fh {
+		top: 0;
+		bottom: 0;
+	}
 	&.fill {
 		top: 0;
 		left: 0;
