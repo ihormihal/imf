@@ -66,7 +66,7 @@ gulp.task('frameworkJs', function() {
 	var sources = framework_libs.map(function(fileName){ return srcDir+'libs/'+fileName+'.js'; });
 	return gulp.src(sources)
 	.pipe(concat('imf.min.js'))
-	//.pipe(uglify(''))
+	.pipe(uglify(''))
 	.pipe(gulp.dest(distDir+'js'));
 });
 
