@@ -11,19 +11,11 @@ $navBtnSize: 20px;
 	max-width: 75%;
 	overflow-y: auto;
 	transition: transform 0.3s ease;
-	background-color: color(dark);
 	padding: $navbarHeight 0;
-	.ink {
-		background-color: #fff;
-	}
 	&.slide-left {
 		transform: translate(-100%,0);
 	}
 	.nav.nav-col li {
-		border-bottom: 1px solid #444;
-		&:first-child {
-			border-top: 1px solid #444;
-		}
 		&.parent {
 			position: relative;
 			a {
@@ -63,9 +55,6 @@ $navBtnSize: 20px;
 			padding: 12px $gap 12px $gap*2;
 			color: #fff;
 			text-transform: uppercase;
-			i.fa {
-				margin-right: $gap;
-			}
 		}
 		.btn {
 			margin: $gap/2 $gap;
@@ -91,6 +80,21 @@ $navBtnSize: 20px;
 			background-color: rgba(0,0,0,0.5);
 		}
 	}
+}
+
+.nav-dark {
+	background-color: color(dark);
+	.ink {
+		background-color: #fff;
+	}
+	.nav.nav-col > li {
+		border-bottom: 1px solid #444;
+		&:first-child {
+			border-top: 1px solid #444;
+		}
+		i { margin-right: $gap; }
+	}
+
 }
 
 //TOPNAV

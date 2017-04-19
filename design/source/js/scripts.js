@@ -69,7 +69,7 @@ var Menu = {
 		}
 
 		var mobileMunu = document.createElement('div');
-		mobileMunu.innerHTML = '<div class="menu-slide slide-left white-bg"><nav><ul class="nav nav-col">'+mobileMenuHTML+'</ul></nav></div><div class="page-overlay"></div>';
+		mobileMunu.innerHTML = '<div class="menu-slide slide-left nav-dark"><nav><ul class="nav nav-col">'+mobileMenuHTML+'</ul></nav></div><div class="page-overlay"></div>';
 		document.body.appendChild(mobileMunu);
 	}
 };
