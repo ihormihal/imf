@@ -48,7 +48,7 @@ p,h1,h2,h3,h4,h5,span {
 .underline {text-decoration: underline;}
 .valign {vertical-align: middle;}
 .nowrap {white-space: nowrap;}
-.small {
+small, .small {
 	@extend .h6;
 }
 sup {
