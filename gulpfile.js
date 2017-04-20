@@ -32,7 +32,7 @@ const framework_libs = [
 ];
 const vendor_libs = [
 	'jquery',
-	//'code',
+	'code',
 	'fancybox',
 	'owl2',
 	//'spin',
