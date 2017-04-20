@@ -44,8 +44,6 @@ const vendor_libs = [
 
 
 
-
-
 gulp.task('vendorCss', function () {
 	var sources = vendor_libs.map(function(dirName){ return vendorDir+dirName+'/*.css'; });
 	return gulp.src(sources)

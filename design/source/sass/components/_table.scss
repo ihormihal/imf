@@ -39,6 +39,19 @@ table {
 			background-color: color(lighten);
 		}
 	}
+	&.first-label {
+		> tbody > tr > td {
+			font-weight: 300;
+			&:first-child {
+				font-weight: 600;
+			}
+		}
+	}
+	&.border-white {
+		td,th {
+			border-color: #fff;
+		}
+	}
 	tbody tr.selected {
 		background-color: color(amber) !important;
 	}
