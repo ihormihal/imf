@@ -21,6 +21,43 @@
 
         <main>
 
+            <div class="slider slider-home owl-carousel" data-nav="true" data-pag="true">
+                <!-- repeat -->
+                <div class="item cover" style="background-image: url(design/images/banner.jpg)">
+                    <div class="container text-center white">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="animated text-shadow" data-animated="fadeInUp">
+                                    <div class="mb2">
+                                        <span class="both-lines h3 italic">Welcome!</span>
+                                    </div>
+                                    
+                                    <div class="huge mb1">Lorem ipsum dolor</div>
+                                    <p class="h3 white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item cover" style="background-image: url(design/images/banner.jpg)">
+                    <div class="container text-center white">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="animated text-shadow" data-animated="fadeInUp">
+                                    <div class="mb2">
+                                        <span class="both-lines h3 italic">Welcome!</span>
+                                    </div>
+                                    
+                                    <div class="huge mb1">Lorem ipsum dolor</div>
+                                    <p class="h3 white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /repeat -->
+            </div>
+
             <section class="primary-dark-bg pt4 pb4" style="background-image: url(design/images/bg-tr-img.png)">
                 <div class="container">
                     <div class="text-center mb4">

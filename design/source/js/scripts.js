@@ -195,6 +195,7 @@ $(function(){
 
 	$('body').on(cssTransitionEnd, function(){
 		$(window).trigger('resize');
+		$('.slider').trigger('refresh.owl.carousel');
 	});
 
 
