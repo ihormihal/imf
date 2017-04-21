@@ -201,12 +201,6 @@ $(function(){
 });
 /*** END GENERAL COMPONENTS ***/
 
-/*** WINDOW RESIZE ***/
-$(window).on('resize', function(){
-	if($().imParallax){
-		$('.parallax').imParallax();
-	}
-});
 
 /*** All IMAGES LOADED ***/
 $(window).on('load', function(){
