@@ -69,7 +69,9 @@ var Menu = {
 		}
 
 		var mobileMunu = document.createElement('div');
-		mobileMunu.innerHTML = '<div class="menu-slide slide-left nav-side nav-dark"><nav><ul class="nav nav-col">'+mobileMenuHTML+'</ul></nav></div><div class="page-overlay"></div>';
+		mobileMunu.innerHTML = '<div id="menu-drawer" class="menu-drawer dark-bg"><nav class="nav-side"><ul class="nav nav-col">'+mobileMenuHTML+'</ul></nav></div>';
+
+		$('body').addClass('has-menu-drawer');
 		document.body.appendChild(mobileMunu);
 	}
 };
@@ -181,21 +183,27 @@ $(function(){
 
 
 	/**** MOBILE NAVBAR DRAWER ***/
-	$(document).on('click', '.menu-open-bar', function(event){
+	$(document).on('click', '#menu-drawer-toggle', function(event){
 		event.preventDefault();
-		console.log('df');
-		$('.menu-slide').toggleClass('opened');
+		$('body').toggleClass('menu-drawer-opened');
 	});
-	$(document).on('click touchend', '.page-overlay', function(event){
-		$('.menu-slide').removeClass('opened');
+	$(document).on('click', function(event){
+		console.log(event.target);
+		if($(event.target).hasClass('menu-drawer-opened')){
+			$('body').removeClass('menu-drawer-opened');
+		}
 	});
-
 
 
 });
 /*** END GENERAL COMPONENTS ***/
 
-
+/*** WINDOW RESIZE ***/
+$(window).on('resize', function(){
+	if($().imParallax){
+		$('.parallax').imParallax();
+	}
+});
 
 /*** All IMAGES LOADED ***/
 $(window).on('load', function(){

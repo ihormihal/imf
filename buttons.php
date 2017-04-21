@@ -87,6 +87,14 @@
 						<a href="javascript:void(0)" class="foursquare"><i class="fa fa-foursquare"></i></a>
 					</div>
 
+					<h3>a, button, input[type=button]</h3>
+
+					<div class="btn-group mt1 mb1">
+						<a href="#" class="btn btn-primary">Button</a>
+						<button class="btn btn-primary">Button</button>
+						<input type="button" class="btn btn-primary" value="Button" />
+					</div>
+
 				</div>
 			</section>
 

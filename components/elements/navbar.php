@@ -3,7 +3,7 @@
 		<div class="row">
 
 			<div class="col-md-12 col-xs-4 show-sm-under">
-				<div class="btn-nav-mobile menu-open-bar"><i class="mti">menu</i></div>
+				<div id="menu-drawer-toggle" class="btn-nav-mobile"><i class="mti">menu</i></div>
 			</div>
 
 			<div class="col-md-3 col-xs-4">

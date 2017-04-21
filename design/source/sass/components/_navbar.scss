@@ -2,39 +2,12 @@ $navbarHeight: 50px;
 $navBtnSize: 20px;
 
 //MOBILE
-.menu-slide {
-	position: fixed;
-	z-index: 9100;
-	left: 0; top: 0; bottom: 0;
-	height: 100%;
-	min-width: 260px;
-	max-width: 75%;
-	overflow-y: auto;
-	transition: transform 0.3s ease;
-	padding: $navbarHeight 0;
-	&.slide-left {
-		transform: translate(-100%,0);
-	}
-	
-	&.opened {
-		visibility: visible;
-		box-shadow: 0px 2px 7px rgba(0,0,0,0.4);
-		transform: translate(0%,0);
-		& + .page-overlay {
-			content: '';
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 1100;
-			background-color: rgba(0,0,0,0.5);
-		}
-	}
-}
-
 .nav-side {
 	.nav.nav-col li {
+		border-bottom: 1px solid #444;
+		&:first-child { border-top: 1px solid #444; }
+
+		//accordion
 		&.parent {
 			position: relative;
 			a {
@@ -70,10 +43,12 @@ $navBtnSize: 20px;
 				> ul { display: block; }
 			}
 		}
+		
 		a {
 			padding: 12px $gap 12px $gap*2;
 			color: #fff;
 			text-transform: uppercase;
+			i { margin-right: $gap; }
 		}
 		&.active a {
 			background-color: $colorPrimary;
@@ -86,21 +61,6 @@ $navBtnSize: 20px;
 		ul {
 			margin-left: $gap;
 		}
-	}
-
-	&.nav-dark {
-		background-color: color(dark);
-		.ink {
-			background-color: #fff;
-		}
-		.nav.nav-col > li {
-			border-bottom: 1px solid #444;
-			&:first-child {
-				border-top: 1px solid #444;
-			}
-			i { margin-right: $gap; }
-		}
-
 	}
 }
 
