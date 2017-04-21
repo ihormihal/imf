@@ -188,10 +188,13 @@ $(function(){
 		$('body').toggleClass('menu-drawer-opened');
 	});
 	$(document).on('click', function(event){
-		console.log(event.target);
 		if($(event.target).hasClass('menu-drawer-opened')){
 			$('body').removeClass('menu-drawer-opened');
 		}
+	});
+
+	$(body).on(cssTransitionEnd, function(){
+		$(window).trigger('resize');
 	});
 
 
