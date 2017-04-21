@@ -193,7 +193,7 @@ $(function(){
 		}
 	});
 
-	$(body).on(cssTransitionEnd, function(){
+	$('body').on(cssTransitionEnd, function(){
 		$(window).trigger('resize');
 	});
 
