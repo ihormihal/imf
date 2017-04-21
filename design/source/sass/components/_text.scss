@@ -33,12 +33,9 @@ h6,.h6,.lh6	{line-height: $fs6 + 4px;}
 
 .lh-btn {line-height: 42px;}
 
-.thin {font-weight: 300;}
-.slim {font-weight: 100;}
 
-p,h1,h2,h3,h4,h5,span {
-	&.thin {font-weight: 100;}
-}
+.slim {font-weight: 300; font-weight: 100;}
+
 
 .normal {font-weight: 400;}
 .bold {font-weight: 500;}

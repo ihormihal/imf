@@ -48,14 +48,17 @@ table {
 	}
 
 	tbody tr.selected {
-		background-color: color(amber) !important;
+		background-color: $colorPrimary !important;
+		td {
+			color: #fff;
+		}
 	}
 	&.hoverable {
 		tbody tr {
 			cursor: pointer;
 		}
 		tbody tr:hover {
-			background-color: color(amber);
+			background-color: lighten($colorPrimary, 10%);
 		}
 	}
 	&.noborder {
