@@ -1,3 +1,19 @@
+.cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.background {
+	background-repeat: no-repeat;
+	background-position: center center;
+	&.bg-right {
+		background-position: right center;
+	}
+	&.bg-left {
+		background-position: left center;
+	}
+}
+
 .image {
 	display: block;
 	width: 100%;
