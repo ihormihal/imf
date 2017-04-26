@@ -185,7 +185,7 @@
             var placeholder = el.getAttribute('placeholder') || "";
             var searchPlaceholder = el.getAttribute('data-search-placeholder') || 'Search...';
             var multiple = el.getAttribute('multiple') !== null ? true : false;
-            var classes = el.className + ' dropdown-select dropdown';
+            var classes = el.className + ' dropdown';
 
             var collection = '';
             var options = el.getElementsByTagName('option');
@@ -210,15 +210,19 @@
             template.className = classes;
 
             if(multiple){
-                template.innerHTML = '<div class="select selection full">'+placeholder+'</div>' +
+                template.innerHTML = '<div class="popup">'+
+                    '<div class="select selection full">'+placeholder+'</div>' +
                     '<div class="collection multiple"><div class="input-icon"><input class="search" type="text" placeholder="'+searchPlaceholder+'"><i class="icon fa fa-search"></i></div>' +
-                        '<ul>'+ collection +'</ul>' +
+                            '<ul>'+ collection +'</ul>' +
+                        '</div>'+
                     '</div>';
             }else{
-                template.innerHTML = '<input class="select full" type="text" readonly placeholder="'+placeholder+'">' + '<div class="icon">' + iconHtml + '</div>' +
+                template.innerHTML = '<div class="popup">'+
+                    '<input class="select full" type="text" readonly placeholder="'+placeholder+'">' + '<div class="icon">' + iconHtml + '</div>' +
                     '<div class="collection"><div class="input-icon"><input class="search" type="text" placeholder="'+searchPlaceholder+'"><i class="icon fa fa-search"></i></div>' +
                         '<ul>'+ collection +'</ul>' +
-                    '</div>';
+                    '</div>'+
+                '</div>';
             }
             $(el).hide();
             $(el).after(template);

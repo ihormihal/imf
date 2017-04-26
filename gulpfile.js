@@ -27,7 +27,8 @@ const framework_libs = [
 	'im-gmap',
 	'im-parallax',
 	'im-owl',
-	'im-select',
+	'imf.select',
+	'imf.dropdown',
 	//'im-header',
 ];
 const vendor_libs = [

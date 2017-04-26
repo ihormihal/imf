@@ -222,26 +222,26 @@
 
 							<div class="form-group">
 								<label for="">Select autocomplete <a class="show-code" href="#select-autocomplete-code"><i class="fa fa-code"></i></a></label>
-								<select class="multiselect full" data-search-placeholder="Search..." name="country" placeholder="Select country...">
+								<select multiple id="test" class="imf-select full" data-search-placeholder="Search..." name="country" placeholder="Select country...">
 									<?php foreach ($countries as $key => $country): ?>
-									<option value="<?php echo $country['code']; ?>"><?php echo $country['name']; ?></option>
+									<option value="<?php echo $country['code']; ?>" <?php if ($country['code'] == 'UA' || $country['code'] == 'RU'): ?>selected<?php endif ?> ><?php echo $country['name']; ?></option>
 									<?php endforeach ?>
 								</select>
 							</div>
 
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<label for="">Select autocomplete with icons <a class="show-code" href="#select-autocomplete-icon-code"><i class="fa fa-code"></i></a></label>
-								<select class="multiselect full" data-search-placeholder="Search..." name="country" placeholder="Select country...">
+								<select class="imf-select full" data-search-placeholder="Search..." name="country" placeholder="Select country...">
 									<option value="">Empty</option>
 									<?php foreach ($countries as $key => $country): ?>
 									<option data-icon="design/img/pin.png" value="<?php echo $country['code']; ?>"><?php echo $country['name']; ?></option>
 									<?php endforeach ?>
 								</select>
-							</div>
+							</div> -->
 
 						</div>
 						<div class="col-md-6">
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<label>File input</label>
 								<span class="fileinput full">
 									<input type="file" name="upload" />
@@ -251,7 +251,7 @@
 
 							<div class="form-group">
 								<label for="">Select autocomplete (multiple) <a class="show-code" href="#select-multiple-code"><i class="fa fa-code"></i></a></label>
-								<select class="multiselect full" data-search-placeholder="Search..." name="countries" placeholder="Select countries..." multiple>
+								<select id="ss" class="multiselect full" data-search-placeholder="Search..." name="countries" placeholder="Select countries..." multiple>
 									<?php foreach ($countries as $key => $country): ?>
 									<option <?php if($country['name'] == 'Morocco') echo 'selected' ?> value="<?php echo $country['code']; ?>"><?php echo $country['name']; ?></option>
 									<?php endforeach ?>
@@ -265,7 +265,7 @@
 									<option data-icon="design/img/pin.png" <?php if($country['name'] == 'Morocco') echo 'selected' ?> value="<?php echo $country['code']; ?>"><?php echo $country['name']; ?></option>
 									<?php endforeach ?>
 								</select>
-							</div>
+							</div> -->
 
 						</div>
 
