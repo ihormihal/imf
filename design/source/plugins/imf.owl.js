@@ -8,7 +8,6 @@
 
 (function($) {
 
-
 	$.fn.imOwlCarousel = function(options){
 
 		var settings = $.extend({
@@ -68,4 +67,5 @@
 		});
 
 	};
+
 })(jQuery);

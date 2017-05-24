@@ -1,5 +1,3 @@
-'use strict';
-
 $(document).on('click', '.ajax-link', function(e){
 	e.preventDefault();
 
@@ -58,7 +56,3 @@ $(document).on('click', '.ajax-nav a', function(e){
 $(function() {
 	$('.ajax-nav li.active a').click();
 });
-
-
-//AJAX EMAIL
-//$(document).on('submit', '.ajax-nav a', function(e){

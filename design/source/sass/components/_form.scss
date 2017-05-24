@@ -155,6 +155,9 @@ textarea {
 	&.input-xl {
 		height: $controlXL;
 	}
+	&.full {
+		min-width: auto;
+	}
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 

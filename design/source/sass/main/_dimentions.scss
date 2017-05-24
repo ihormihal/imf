@@ -8,12 +8,15 @@
 .text-center {text-align: center;}
 
 .nm {margin: 0 !important;}
+.np {padding: 0 !important;}
 .ml {margin-left: 0.5*$gap;}
 .mr {margin-right: 0.5*$gap;}
 .mt {margin-top: 0.5*$gap;}
 .mb {margin-bottom: 0.5*$gap;}
 .pt {padding-top: 0.5*$gap;}
 .pb {padding-bottom: 0.5*$gap;}
+.pr {padding-right: 0.5*$gap;}
+.pl {padding-left: 0.5*$gap;}
 @for $i from 1 through 8 {
 	.m#{$i} {
 		margin: $gap*$i;

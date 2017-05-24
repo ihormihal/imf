@@ -1,7 +1,6 @@
 'use strict';
-//var lr = require('tiny-lr');
+
 const gulp  = require('gulp'),
-	//livereload= require('gulp-livereload'),
 	sass      = require('gulp-sass'),
 	rename    = require('gulp-rename'),
 	concat    = require('gulp-concat'),
@@ -16,22 +15,13 @@ const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 
 
-/**** CONFIG ****/
-const srcDir  = 'design/source/';
-const vendorDir  = 'design/source/vendor/';
-const distDir = 'design/';
+/*** CONFIG ***/
 
+const srcDir  = './design/source';
+const vendorDir  = './design/vendor';
+const destDir = './design';
 
-const framework_libs = [
-	//'fileinput',
-	'im-gmap',
-	'im-parallax',
-	'im-owl',
-	'imf.select',
-	'imf.dropdown',
-	//'im-header',
-];
-const vendor_libs = [
+const vendors = [
 	'jquery',
 	//'code',
 	'fancybox',
@@ -41,62 +31,99 @@ const vendor_libs = [
 	//'wow',
 	//'sektor'
 ];
-/**** END CONFIG ****/
+const plugins = [
+	'imf.gmap',
+	//'imf.header',
+	'imf.owl',
+	'imf.parallax',
+	'imf.ripple',
+	'imf.select'
+];
 
 
+/*** GULP TASKS ***/
 
-gulp.task('vendorCss', function () {
-	var sources = vendor_libs.map(function(dirName){ return vendorDir+dirName+'/*.css'; });
-	return gulp.src(sources)
+//Vendor CSS
+gulp.task('vendorCss', function() {
+	var files = [];
+	for (var i = 0; i < vendors.length; i++) {
+		files.push(vendorDir+'/'+vendors[i]+'/*.css');
+	}
+	return gulp.src(files)
 	.pipe(concatCss("vendor.css"))
 	.pipe(minifycss(''))
 	.pipe(rename("vendor.min.css"))
-	.pipe(gulp.dest(distDir+'css'));
+	.pipe(gulp.dest(destDir+'/css'));
 });
 
+//Vendor JS
 gulp.task('vendorJs', function() {
-	var sources = vendor_libs.map(function(dirName){ return vendorDir+dirName+'/*.js'; });
-	return gulp.src(sources)
+	var files = [];
+	for (var i = 0; i < vendors.length; i++) {
+		files.push(vendorDir+'/'+vendors[i]+'/*.js');
+	}
+	return gulp.src(files)
 	.pipe(concat('vendor.min.js'))
-	.pipe(gulp.dest(distDir+'js'));
-});
-
-gulp.task('frameworkJs', function() {
-	var sources = framework_libs.map(function(fileName){ return srcDir+'libs/'+fileName+'.js'; });
-	return gulp.src(sources)
-	.pipe(concat('imf.min.js'))
 	.pipe(uglify(''))
-	.pipe(gulp.dest(distDir+'js'));
+	.pipe(gulp.dest(destDir+'/js'));
 });
 
-gulp.task('scripts', function() {
-	return gulp.src(srcDir+'js/*.js')
-	.pipe(concat('scripts.min.js'))
-	.pipe(uglify(''))
-	.pipe(gulp.dest(distDir+'js'));
-});
-
-
+//combine to single task
 gulp.task('vendor', ['vendorCss','vendorJs']);
 
-gulp.task('sass', function () {
-	gulp.src(srcDir+'sass/**/*.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(concatCss("style.css"))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-		}))
-		.pipe(minifycss(''))
-		.pipe(rename("style.min.css"))
-		.pipe(gulp.dest(distDir+'css'));
+//Framework jQuery plugins
+gulp.task('plugins', function() {
+	var files = [];
+	for (var i = 0; i < plugins.length; i++) {
+		files.push(srcDir+'/plugins/'+plugins[i]+'.js');
+	}
+	return gulp.src(files)
+	.pipe(concat('plugins.min.js'))
+	.pipe(uglify(''))
+	.pipe(gulp.dest(destDir+'/js'));
 });
+
+//Custom JS
+gulp.task('scripts', function() {
+	return gulp.src([srcDir+'/js/main.js', srcDir+'/js/components/*.js'])
+	.pipe(concat('scripts.min.js'))
+	.pipe(uglify(''))
+	.pipe(gulp.dest(destDir+'/js'));
+});
+
+//All CSS
+gulp.task('sass', function () {
+	return gulp.src(srcDir+'/sass/**/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(concatCss("style.css"))
+	.pipe(autoprefixer({
+		browsers: ['last 2 versions'],
+	}))
+	.pipe(minifycss(''))
+	.pipe(rename("style.min.css"))
+	.pipe(gulp.dest(destDir+'/css'));
+});
+
+/*
+//for React
+gulp.task('build', function () {
+	return browserify({entries: './design/app_react/app.jsx', extensions: ['.jsx'], debug: true})
+		.transform('babelify', {
+			presets: ['es2015', 'react'],
+			plugins: ['transform-class-properties']
+		})
+		.bundle()
+		.pipe(source('build.js'))
+		.pipe(gulp.dest(distDir+'js'));
+});
+*/
 
 
 gulp.task('watch', function () {
-	gulp.watch(srcDir+'sass/**/*.scss', ['sass']);
-	gulp.watch(srcDir+'js/*.js', ['scripts']);
-	gulp.watch(srcDir+'libs/*.js', ['frameworkJs']);
-	gulp.watch('./design/app_react/**/*.jsx', ['build']); //react
+	gulp.watch(srcDir+'/sass/**/*.scss', ['sass']);
+	gulp.watch(srcDir+'/plugins/**/*.js', ['plugins']);
+	gulp.watch(srcDir+'/js/**/*.js', ['scripts']);
+	//gulp.watch('./design/app_react/**/*.jsx', ['build']); //react
 });
 
-gulp.task('default', ['vendorCss','vendorJs','frameworkJs','scripts','sass']);
+gulp.task('default', ['vendorCss','vendorJs','plugins','scripts','sass']);

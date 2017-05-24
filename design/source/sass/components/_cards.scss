@@ -1,10 +1,9 @@
-
-
-
 .card-box, .card-row, .card-image {
-	@extend .box, .shadow-2, .shadow-3-hover;
+	@extend .shadow-2-hover;
+	display: block;
 	overflow: hidden;
 	background-color: #fff;
+	padding: $gap;
 	border-radius: $boxRadius;
 	.title {
 		padding: 0 0 16px 0;

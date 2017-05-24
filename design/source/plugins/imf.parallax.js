@@ -2,12 +2,12 @@
  * Universal Single-Layer Parallax
  * parallax - v0.1.2 - 2016-10-20
  * https://github.com/ihormihal/IM-Framework
- * http://mycode.in.ua
- * Copyright 2017 Ihor Mykhalchenko
+ * Ihor Mykhalchenko (http://mycode.in.ua)
  */
 
 
 (function($) {
+	
 	$.fn.imParallax = function(options){
 		var settings = $.extend({
 			speed: 0.8, // 0 -> 1 : slowly, 1 -> 2 : faster
@@ -115,4 +115,5 @@
 			main();
 		});
 	};
+
 })(jQuery);

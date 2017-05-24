@@ -1,12 +1,14 @@
 (function($) {
 
 	$.fn.imHeader = function(options) {
+
 		var that = $(this);
 		var settings = $.extend({
 			fixedClass: 'mini',
 			breakpoint: 300,
 			mobileWidth: 992
 		}, options);
+		
 
 		var header_fixed = 0;
 		var header_fixed_pre = 0;

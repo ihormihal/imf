@@ -58,11 +58,12 @@
 									<button class="btn btn-lg btn-mt btn-primary">Submit</button>
 								</div>
 							</form>
+							<div class="hide-md-over mt4"></div>
 						</div>
 						<div class="col-md-4">
 							<h3>Social networks</h3>
 							<div class="text-subline"></div>
-							<ul class="social-buttons mb2 text-sm-center">
+							<ul class="social-buttons mb2">
 								<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
 								<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
