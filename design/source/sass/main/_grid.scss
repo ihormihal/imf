@@ -146,6 +146,14 @@
 			padding-right: $gap/2;
 		}
 	}
+	&.slim {
+		margin-left: -$gap/4;
+		margin-right: -$gap/4;
+		> *[class ^= "col-"] {
+			padding-left: $gap/4;
+			padding-right: $gap/4;
+		}
+	}
 	&.condensed {
 		margin-left: 0;
 		margin-right: 0;
@@ -154,16 +162,17 @@
 		}
 	}
 	&.tile {
-		margin-bottom: -$gap*2;
+		//margin-bottom: -$gap*2;
 		> *[class ^= "col-"] { padding-bottom: $gap*2; }
 		&.thin {
-			margin-bottom: -$gap;
+			//margin-bottom: -$gap;
 			> *[class ^= "col-"] { padding-bottom: $gap; }
 		}
+		&.rslim {
+			//margin-bottom: -$gap/2;
+			> *[class ^= "col-"] { padding-bottom: $gap/2; }
+		}
 	}
-	// &.gaprow {
-	// 	> *[class ^= "col-"] {margin-bottom: $gap;}
-	// }
 }
 
 
@@ -177,35 +186,35 @@
 
 /**** SET FOR BIGGER SCREEN ****/
 @include setForBigger(xs);
-@media screen and (min-width: #{$xs}px) {
+@media screen and (min-width: $xs) {
 	@include setForBigger(sm);
 }
-@media screen and (min-width: #{$sm}px) {
+@media screen and (min-width: $sm) {
 	@include setForBigger(md);
 }
-@media screen and (min-width: #{$md}px) {
+@media screen and (min-width: $md) {
 	@include setForBigger(lg);
 }
-@media screen and (min-width: #{$lg}px) {
+@media screen and (min-width: $lg) {
 	@include setForBigger(xl);
 }
-@media screen and (min-width: #{$xl}px) {
+@media screen and (min-width: $xl) {
 	@include setForBigger(xxl);
 }
 /**** SET FOR SMALLER SCREEN ****/
-@media screen and (min-width: #{$xl - 1}px) {
+@media screen and (min-width: $xxl - 1px) {
 	@include setForSmaller(xxl);
 }
-@media screen and (max-width: #{$xl - 1}px) {
+@media screen and (max-width: $xl - 1px) {
 	@include setForSmaller(xl);
 }
-@media screen and (max-width: #{$lg - 1}px) {
+@media screen and (max-width: $lg - 1px) {
 	@include setForSmaller(lg);
 }
-@media screen and (max-width: #{$md - 1}px) {
+@media screen and (max-width: $md - 1px) {
 	@include setForSmaller(md);
 }
-@media screen and (max-width: #{$sm - 1}px) {
+@media screen and (max-width: $sm - 1px) {
 	@include setForSmaller(sm);
 	.container.fit {
 		padding-left: $gap;

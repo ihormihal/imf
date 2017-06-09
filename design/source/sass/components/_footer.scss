@@ -35,7 +35,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: #{$md - 1}px) {
+@media screen and (max-width: $md - 1px) {
 	footer {
 		.copyright {
 			text-align: center;

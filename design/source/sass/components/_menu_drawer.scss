@@ -31,7 +31,7 @@ body.has-menu-drawer {
 }
 
 //move body content for static menu
-@media screen and (min-width: #{$md}px) {
+@media screen and (min-width: $md) {
 	body.has-menu-drawer.menu-drawer-static {
 		padding-left: 0;
 		transition: padding-left 0.3s ease;

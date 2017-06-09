@@ -265,7 +265,7 @@ header .nav-inline > li > a:not(.btn) {
 	}
 }
 
-@media screen and (min-width: #{$md}px) {
+@media screen and (min-width: $md) {
 	.navbar-lg-lg {
 		.valign {
 			height: 100px;
@@ -273,7 +273,7 @@ header .nav-inline > li > a:not(.btn) {
 	}
 }
 
-@media screen and (max-width: #{$md - 1}px) {
+@media screen and (max-width: $md - 1px) {
 	.navbar {
 		.navbar-area {
 			margin-top: 0;

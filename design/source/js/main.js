@@ -45,6 +45,6 @@ $(function() {
 		$('.slider').imOwlCarousel({type: 'slider'});
 	}
 	//Select autocomplete
-	if($().imSelect) $('select.multiselect').imSelect();
+	if($().imfSelect) $('select.imf-select').imfSelect();
 
 });

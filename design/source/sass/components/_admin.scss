@@ -22,7 +22,7 @@ html.admin, html.admin body {
 	text-transform: uppercase;
 }
 
-@media screen and (max-width: #{$md - 1}px) {
+@media screen and (max-width: $md - 1px) {
 	html.admin, html.admin body {
 		overflow: auto;
 	}

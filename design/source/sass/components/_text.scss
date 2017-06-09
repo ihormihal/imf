@@ -50,7 +50,7 @@ sup, sub {
 sup { vertical-align: top; }
 sub { vertical-align: bottom; }
 
-@media screen and (max-width: #{$md - 1}px) {
+@media screen and (max-width: $md - 1px) {
 	.huge  {font-size: $fs1; line-height: $fs1 + 8px;}
 	h1,.h1 {font-size: $fs2;}
 	h2,.h2 {font-size: $fs3;}

@@ -515,25 +515,42 @@ textarea {
 
 .input-icon {
 	position: relative;
-	input[type=text], input[type=email], input[type=password] {
+	//icon right
+	input {
 		padding-right: 16px;
 	}
 	.icon {
-		color: color(light);
 		position: absolute;
-		right: 0;
-		bottom: 0;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
 		width: 16px;
-		line-height: 36px;
 		text-align: center;
 		display: block;
 	}
 	&.default {
-		.default {
+		input {
 			padding-right: $controlMD;
 		}
-		i {
+		.icon {
 			width: $controlMD;
+		}
+	}
+	//icon left
+	&.icon-left {
+		input {
+			padding-right: inherit;
+			padding-left: 16px;
+		}
+		.icon {
+			right: inherit;
+			left: 0;
+		}
+		&.default {
+			input {
+				padding-right: inherit;
+				padding-left: $controlMD;
+			}
 		}
 	}
 }

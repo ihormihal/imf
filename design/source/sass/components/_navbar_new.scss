@@ -261,7 +261,7 @@ header .nav-inline > li > a:not(.btn) {
 }
 
 $logo-padding-fixed: 8px;
-@media screen and (max-width: #{$md - 1}px) {
+@media screen and (max-width: $md - 1px) {
 	.navbar {
 		position: fixed;
 		top: 0;
