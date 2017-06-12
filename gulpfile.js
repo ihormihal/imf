@@ -10,9 +10,9 @@ const gulp  = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer');
 
 
-const browserify = require('browserify');
-const babelify = require('babelify');
-const source = require('vinyl-source-stream');
+//const browserify = require('browserify');
+//const babelify = require('babelify');
+//const source = require('vinyl-source-stream');
 
 
 /*** CONFIG ***/
