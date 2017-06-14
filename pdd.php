@@ -110,7 +110,92 @@
 							</table>
 						</div>
 					</div>
-					
+					<div class="mt2"></div>
+					<div class="row">
+						<div class="col-md-12">
+							<table class="full nowrap">
+								<caption>Маневры</caption>
+								<thead>
+									<tr>
+										<th></th>
+										<th>Разворот</th>
+										<th>Задний ход</th>
+										<th>Обгон</th>
+										<th>Остановка</th>
+										<th>Стоянка</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Ж/Д переезд</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i> &minus; 100m</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i> &plusmn; 50m</td>
+									</tr>
+									<tr>
+										<td>Тоннель</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i> вьезд/выезд</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+									</tr>
+									<tr>
+										<td>Мосты, путепроводы, эстакады</td>
+										<td class="h3 red"><i class="mti">cancel</i> &darr; &uarr;</td>
+										<td class="h3 red"><i class="mti">cancel</i> &darr;</td>
+										<td class="h3 red"><i class="mti">cancel</i> &darr;</td>
+										<td class="h3 red"><i class="mti">cancel</i> &darr; &uarr;</td>
+										<td class="h3 red"><i class="mti">cancel</i> &darr; &uarr;</td>
+									</tr>
+									<tr>
+										<td>Пеш. переходы</td>
+										<td class="h3 red"><i class="mti">cancel</i> &plusmn; 10m</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i> &minus; 50/100m</td>
+										<td class="h3 red"><i class="mti">cancel</i> &plusmn; 10m</td>
+										<td class="h3 red"><i class="mti">cancel</i> &plusmn; 10m</td>
+									</tr>
+									<tr>
+										<td>Перекресток</td>
+										<td class="h3 green"><i class="mti">check_circle</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i> &minus; 10m</td>
+										<td class="h3 red"><i class="mti">cancel</i> &plusmn; 10m</td>
+									</tr>
+									<tr>
+										<td>Автомагистраль</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 green"><i class="mti">check_circle</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+									</tr>
+									<tr>
+										<td>Дорога для автомобилей</td>
+										<td class="h3 green"><i class="mti">check_circle</i> на знаке</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 green"><i class="mti">check_circle</i></td>
+										<td class="h3 green"><i class="mti">check_circle</i> на знаке</td>
+										<td class="h3 green"><i class="mti">check_circle</i> на знаке</td>
+									</tr>
+									<tr>
+										<td>Места с огр. видимостю + в конце подъема</td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 red"><i class="mti">cancel</i> вне н.п.</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Так же, остановка запрещена <span class="red">&plusmn; 30m</span> от знака остановки маршрутных ТС или заездного кармана</p>
+							<p>Напротив Т-образного перекрестка без сплошной</p>
+						</div>
+					</div>
 				</div>
 			</section>
 

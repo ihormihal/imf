@@ -185,11 +185,7 @@ ul.collection {
 	> li {
 		float: none !important;
 		padding: 12px;
-		border-bottom: 1px solid color(light);
 		font-size: 12px;
-		&:last-child {
-			border: none;
-		}
 	}
 }
 

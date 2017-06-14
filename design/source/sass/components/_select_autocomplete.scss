@@ -131,12 +131,10 @@
 
 .imf-select {
 	.popup {
-		.imfs-search {
-			padding-left: $gap;
-			.icon {}
-		}
-		.input-search .icon {
-			right: $gap;
+		.search-wrapper {
+			padding: $gap;
+			position: relative;
+			border-bottom: 1px solid color(light);
 		}
 	}
 	.collection {

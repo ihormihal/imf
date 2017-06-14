@@ -219,8 +219,8 @@
             }else{
                 template.innerHTML = '<div class="imf-select">'+
                     '<input class="select full" type="text" readonly placeholder="'+placeholder+'">' + '<div class="icon">' + iconHtml + '</div>' +
-                    '<div class="popup collection full"><div class="input-icon"><input class="search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon fa fa-search"></i></div>' +
-                        '<ul>'+ collection +'</ul>' +
+                    '<div class="popup full"><div class="search-wrapper"><div class="input-icon"><input class="mtr search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon light fa fa-search"></i></div></div>' +
+                        '<ul class="collection">'+ collection +'</ul>' +
                     '</div>'+
                 '</div>';
             }

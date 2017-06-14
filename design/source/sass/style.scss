@@ -29,7 +29,17 @@
 @import "components/btn";
 @import "components/buttons";
 @import "components/btn_loading";
-@import "components/form";
+//@import "components/form";
+
+/* FORM */
+@import "controls/form.general";
+@import "controls/inputs";
+@import "controls/checkbox.material";
+@import "controls/checkbox.switch.material";
+@import "controls/checkbox.btn";
+@import "controls/radio.material";
+
+@import "controls/btn";
 
 
 @import "components/nav";
