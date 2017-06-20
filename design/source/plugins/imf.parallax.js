@@ -8,7 +8,7 @@
 
 (function($) {
 	
-	$.fn.imParallax = function(options){
+	$.fn.imfParallax = function(options){
 		var settings = $.extend({
 			speed: 0.8, // 0 -> 1 : slowly, 1 -> 2 : faster
 			minWidth : 992

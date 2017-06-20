@@ -160,7 +160,11 @@ $selectionBtnH : ($controlMD - 0.25rem);
 	.selection {
 		height: auto;
 		min-height: $controlMD;
+		line-height: $controlMD;
+		color: $placeholderColor;
 		> div {
+			background-color: #fff;
+			color: #000;
 			position: relative;
 			display: inline-block;
 			height: $selectionBtnH;
@@ -175,6 +179,7 @@ $selectionBtnH : ($controlMD - 0.25rem);
 				right: 4px;
 				transform: translate(0,-50%);
 				opacity: 0.5;
+				margin-top: 2px;
 				&:hover {
 					opacity: 1;
 				}

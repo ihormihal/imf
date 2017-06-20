@@ -24,10 +24,10 @@ $('body').on(cssTransitionEnd, function(){
 $(function() {
 
 	//Google MAPS
-	if($().imGmapSingle) $('.gmap.single').imGmapSingle();
-	if($().imGmapMultiple){
+	if($().imfGmapSingle) $('.gmap.single').imfGmapSingle();
+	if($().imfGmapMultiple){
 		//multipe points gmap
-		var ajaxMap = $('#ajax-map').imGmapMultiple({
+		var ajaxMap = $('#ajax-map').imfGmapMultiple({
 			animation: true
 		});
 		//gmap filter
@@ -40,9 +40,9 @@ $(function() {
 	}
 
 	//OWL Carousel
-	if($().imOwlCarousel){
-		$('.carousel').imOwlCarousel({type: 'carousel'});
-		$('.slider').imOwlCarousel({type: 'slider'});
+	if($().imfOwlCarousel){
+		$('.carousel').imfOwlCarousel({type: 'carousel'});
+		$('.slider').imfOwlCarousel({type: 'slider'});
 	}
 	//Select autocomplete
 	if($().imfSelect) $('select.imf-select').imfSelect();

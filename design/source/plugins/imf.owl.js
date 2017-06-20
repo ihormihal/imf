@@ -1,6 +1,6 @@
 /*
  * OWL-Carousel 2 wrapper
- * v0.1.0 - 2017-02-20
+ * v0.1.1 - 2017-02-20
  * https://github.com/ihormihal/IM-Framework
  * http://mycode.in.ua
  * Copyright 2017 Ihor Mykhalchenko
@@ -8,7 +8,7 @@
 
 (function($) {
 
-	$.fn.imOwlCarousel = function(options){
+	$.fn.imfOwlCarousel = function(options){
 
 		var settings = $.extend({
 			type: 'carousel'
@@ -33,7 +33,8 @@
 					361: { items: parseInt(el.data('sm')) || 2 },
 					769: { items: parseInt(el.data('md')) || 3 },
 					1008: { items: parseInt(el.data('lg')) || 4 },
-					1265: { items: parseInt(el.data('xl')) || 5 }
+					1265: { items: parseInt(el.data('xl')) || 5 },
+					1904: { items: parseInt(el.data('xxl')) || 5 }
 				};
 			}else if(settings.type == 'slider'){
 				params.items = 1;

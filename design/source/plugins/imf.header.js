@@ -1,6 +1,6 @@
 (function($) {
 
-	$.fn.imHeader = function(options) {
+	$.fn.imfHeader = function(options) {
 
 		var that = $(this);
 		var settings = $.extend({

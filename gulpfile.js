@@ -33,8 +33,7 @@ const plugins = [
 	'imf.owl',
 	'imf.parallax',
 	'imf.ripple',
-	'select'
-	//'imf.select'
+	'imf.select'
 ];
 
 

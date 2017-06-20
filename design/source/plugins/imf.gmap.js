@@ -1,6 +1,6 @@
 (function($) {
 
-	$.fn.imGmapSingle = function(options) {
+	$.fn.imfGmapSingle = function(options) {
 
 		var that = this;
 		var settings = $.extend({
@@ -53,7 +53,7 @@
 
 	};
 
-	$.fn.imGmapMultiple = function(options) {
+	$.fn.imfGmapMultiple = function(options) {
 		if(this.length == 0) return false;
 		var that = this[0];
 		var settings = $.extend({
