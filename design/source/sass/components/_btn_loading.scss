@@ -4,11 +4,11 @@
   &:before{
     content:'';
     position: absolute;
-    right: 10px;
+    right: 10*$pt;
     top: 50%;
-    margin-top: -9px;
-    width: 12px;
-    height: 12px;
+    margin-top: -9*$pt;
+    width: 12*$pt;
+    height: 12*$pt;
     border: 3px solid #fff;
     border-left-color: transparent;
     border-radius: 50%;
@@ -40,7 +40,7 @@
     }
     &:after{
       transition-delay: 0s;
-      width: 24px;
+      width: 24*$pt;
     }
   }
 }

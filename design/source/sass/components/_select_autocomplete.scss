@@ -129,6 +129,8 @@
 	}
 }*/
 
+$selectionBtnH : ($controlMD - 0.25rem);
+
 .imf-select {
 	.popup {
 		.search-wrapper {
@@ -151,6 +153,31 @@
 			&.active {
 				background-color: $colorPrimary;
 				color: #fff;
+			}
+		}
+	}
+
+	.selection {
+		height: auto;
+		min-height: $controlMD;
+		> div {
+			position: relative;
+			display: inline-block;
+			height: $selectionBtnH;
+			line-height: $selectionBtnH;
+			margin: 0 2px 4px 2px;
+			padding: 0 25px 0 5px;
+			border: 1px solid color(light);
+			vertical-align: middle;
+			.x {
+				position: absolute;
+				top: 50%;
+				right: 4px;
+				transform: translate(0,-50%);
+				opacity: 0.5;
+				&:hover {
+					opacity: 1;
+				}
 			}
 		}
 	}

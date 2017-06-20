@@ -21,7 +21,7 @@
 			display: inline-block;
 			content: "\f105";
 			font-family: FontAwesome;
-			margin: 0 7px;
+			margin: 0 7*$pt;
 		}
 		&:last-child:after {display: none;}
 	}

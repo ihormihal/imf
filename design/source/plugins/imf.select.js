@@ -1,6 +1,6 @@
 /*
  * Select autocomplete plugin
- * v0.1.0 - 2017-02-20
+ * v0.1.1 - 2017-05-20
  * https://github.com/ihormihal/IM-Framework
  * http://mycode.in.ua
  * Copyright 2017 Ihor Mykhalchenko
@@ -13,6 +13,9 @@
         }, options);
 
         var that = this;
+
+        //dublicate classname to inner input
+        var inputClassName = that.attr('class') + ' select';
 
         // $(document).on('click', function(event){
         //     $('.dropdown.multiselect.focus').removeClass('focus');
@@ -44,7 +47,6 @@
             that.el = el;
             that.setValue = function(value){
                 that.el.val(value.value);
-
             };
             that.setValues = function(values){
                 that.el.val('');
@@ -91,7 +93,7 @@
             };
 
             that.setValue = function(value){
-                that.el.val(value.text);
+                value.value ? that.el.val(value.text) : that.el.val('');
                 if(value.icon){
                     //that.el.parent().find('.icon').html('<img src="' + value.icon + '">');
                     //that.el.addClass('has-icon');
@@ -130,9 +132,11 @@
                 if(selected.find('.icon').length > 0){
                     icon = selected.find('.icon').attr('src')
                 }
+
                 return {
                     text: selected.text(),
-                    value: selected.attr('data-value') || selected.text(),
+                    value: selected.attr('data-value'),
+                    //value: selected.attr('data-value') || selected.text(),
                     icon: icon
                 };
             };
@@ -181,11 +185,11 @@
 
         var init = function(el){
 
-            var name = el.getAttribute('name') || "";
+            //var name = el.getAttribute('name') || "";
             var placeholder = el.getAttribute('placeholder') || "";
-            var searchPlaceholder = el.getAttribute('data-search-placeholder') || 'Search...';
+            var searchPlaceholder = el.getAttribute('data-search-placeholder') ||  'Search...';
             var multiple = el.getAttribute('multiple') !== null ? true : false;
-            var classes = el.className + ' dropdown';
+            var classes = 'dropdown';
 
             var collection = '';
             var options = el.getElementsByTagName('option');
@@ -211,14 +215,14 @@
 
             if(multiple){
                 template.innerHTML = '<div class="imf-select">'+
-                    '<div class="select selection full">'+placeholder+'</div>' +
-                    '<div class="popup collection full multiple"><div class="input-icon"><input class="search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon fa fa-search"></i></div>' +
-                            '<ul>'+ collection +'</ul>' +
+                    '<div class="select">'+placeholder+'</div>' +
+                    '<div class="popup full multiple"><div class="search-wrapper"><div class="input-icon"><input class="mtr search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon light fa fa-search"></i></div></div>' +
+                            '<ul class="collection">'+ collection +'</ul>' +
                         '</div>'+
                     '</div>';
             }else{
                 template.innerHTML = '<div class="imf-select">'+
-                    '<input class="select full" type="text" readonly placeholder="'+placeholder+'">' + '<div class="icon">' + iconHtml + '</div>' +
+                    '<input class="'+inputClassName+'" type="text" readonly placeholder="'+placeholder+'">' + '<div class="icon">' + iconHtml + '</div>' +
                     '<div class="popup full"><div class="search-wrapper"><div class="input-icon"><input class="mtr search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon light fa fa-search"></i></div></div>' +
                         '<ul class="collection">'+ collection +'</ul>' +
                     '</div>'+
@@ -293,6 +297,8 @@
                 }else{
                     select.setValue(collection.getValue());
                     input.setValue(collection.getValue());
+
+                    dropdown.hide();
                 }
             });
 

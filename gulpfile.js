@@ -21,6 +21,7 @@ const vendors = [
 	//'code',
 	'fancybox',
 	'owl2',
+	'air-datepicker',
 	//'spin',
 	//'toastr',
 	//'wow',
@@ -32,7 +33,8 @@ const plugins = [
 	'imf.owl',
 	'imf.parallax',
 	'imf.ripple',
-	'imf.select'
+	'select'
+	//'imf.select'
 ];
 
 
@@ -74,7 +76,7 @@ gulp.task('plugins', function() {
 	}
 	return gulp.src(files)
 	.pipe(concat('plugins.min.js'))
-	.pipe(uglify(''))
+	//.pipe(uglify(''))
 	.pipe(gulp.dest(destDir+'/js'));
 });
 

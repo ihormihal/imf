@@ -1,28 +1,30 @@
+$pt: 0.0625rem; // default rem = 16px
+
 /*grid*/
-$gap: 16px;
+$gap: 1rem;
 $columns: 12;
 $max: 1200px;
 $max-wide: 96%;
 
 /*breackpoints*/
-$xs : 361px;
+$xs  : 361px;
 $port: 412px;
 $land: 600px;
-$sm : 769px;
-$md : 1008px;
-$lg : 1265px;
-$xl : 1904px;
+$sm  : 769px;
+$md  : 1008px;
+$lg  : 1265px;
+$xl  : 1904px;
 $xxl : 2560px;
 
 $fontPrimary: 'Roboto Slab', sans-serif;
-$fs0 : 72px;
-$fs1 : 48px;
-$fs2 : 36px;
-$fs3 : 24px; 
-$fs4 : 18px;
-$fs5 : 16px;
-$fs6 : 13px;
-$fs7 : 10px;
+$fs0 : 72*$pt;
+$fs1 : 48*$pt;
+$fs2 : 36*$pt;
+$fs3 : 24*$pt;
+$fs4 : 18*$pt;
+$fs5 : 16*$pt;
+$fs6 : 13*$pt;
+$fs7 : 10*$pt;
 
 /* sizes */
 $boxRadius: 4px; //cards
@@ -31,18 +33,18 @@ $inputBorderRadius: 4px;
 $inputShadow: false;
 
 /* form control && button sizes */
-$controlXS: 24px;
-$controlSM: 30px;
-$controlMD: 36px;
-$controlLG: 48px;
-$controlXL: 64px;
+$controlXS: 24*$pt;
+$controlSM: 30*$pt;
+$controlMD: 36*$pt;
+$controlLG: 48*$pt;
+$controlXL: 64*$pt;
 
 /* form control && button FONT sizes */
-$textXS: 10px;
-$textSM: 12px;
-$textMD: 14px;
-$textLG: 18px;
-$textXL: 24px;
+$textXS: 10*$pt;
+$textSM: 12*$pt;
+$textMD: 14*$pt;
+$textLG: 18*$pt;
+$textXL: 24*$pt;
 
 $colorPrimary: #2196f3;
 $colorPrimaryLight: #2196f3;

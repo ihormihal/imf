@@ -6,9 +6,9 @@
 .side-by-side {
 	.cell {
 		@extend .flex-middle;
-		height: 400px;
+		height: 400*$pt;
 		&.background {
-			background-size: auto 400px;
+			background-size: auto 400*$pt;
 			background-position: center right;
 		}
 		img {

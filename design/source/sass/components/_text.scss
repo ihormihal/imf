@@ -23,13 +23,13 @@ h4,.h4 {font-size: $fs4;}
 h5,.h5 {font-size: $fs5;}
 h6,.h6 {font-size: $fs6;}
 
-.huge,.lhuge {line-height: $fs0 + 8px;}
-h1,.h1,.lh1 {line-height: $fs1 + 8px;}
-h2,.h2,.lh2	{line-height: $fs2 + 6px;}
-h3,.h3,.lh3	{line-height: $fs3 + 4px;}
-h4,.h4,.lh4	{line-height: $fs4 + 4px;}
-h5,.h5,.lh5	{line-height: $fs5 + 4px;}
-h6,.h6,.lh6	{line-height: $fs6 + 4px;}
+.huge,.lhuge {line-height: $fs0 + 0.5rem;}
+h1,.h1,.lh1 {line-height: $fs1 + 0.5rem;}
+h2,.h2,.lh2	{line-height: $fs2 + 0.375rem;}
+h3,.h3,.lh3	{line-height: $fs3 + 0.25rem;}
+h4,.h4,.lh4	{line-height: $fs4 + 0.25rem;}
+h5,.h5,.lh5	{line-height: $fs5 + 0.25rem;}
+h6,.h6,.lh6	{line-height: $fs6 + 0.25rem;}
 
 .slim {font-weight: 300; font-weight: 100;}
 .normal {font-weight: 400;}
@@ -45,13 +45,13 @@ small, .small {
 }
 sup, sub {
 	display: inline-block;
-	font-size: 10px;
+	font-size: 10*$pt;
 }
 sup { vertical-align: top; }
 sub { vertical-align: bottom; }
 
 @media screen and (max-width: $md - 1px) {
-	.huge  {font-size: $fs1; line-height: $fs1 + 8px;}
+	.huge  {font-size: $fs1; line-height: $fs1 + 0.5rem;}
 	h1,.h1 {font-size: $fs2;}
 	h2,.h2 {font-size: $fs3;}
 }

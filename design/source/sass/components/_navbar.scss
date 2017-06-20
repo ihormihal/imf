@@ -1,5 +1,5 @@
-$navbarHeight: 50px;
-$navBtnSize: 20px;
+$navbarHeight: 50*$pt;
+$navBtnSize: 20*$pt;
 
 //MOBILE
 .nav-side {
@@ -11,7 +11,7 @@ $navBtnSize: 20px;
 		&.parent {
 			position: relative;
 			a {
-				padding-right: 50px;
+				padding-right: 50*$pt;
 			}
 			.toggle {
 				display: block;
@@ -19,16 +19,16 @@ $navBtnSize: 20px;
 				position: absolute;
 				right: 0;
 				top: 0;
-				height: 48px;
-				width: 50px;
-				line-height: 50px;
+				height: 48*$pt;
+				width: 50*$pt;
+				line-height: 50*$pt;
 				text-align: center;
 				&:after {
 					position: absolute;
-					right: 20px;
+					right: 20*$pt;
 					top: 50%;
-					margin-top: -10px;
-					font: normal normal normal 18px/1 FontAwesome;
+					margin-top: -10*$pt;
+					font-family: FontAwesome;
 					content: "\f105";
 					transform: rotate(0deg);
 					transition: transform 0.3s ease;
@@ -45,7 +45,7 @@ $navBtnSize: 20px;
 		}
 		
 		a {
-			padding: 12px $gap 12px $gap*2;
+			padding: 0.75*$gap $gap 0.75*$gap 2*$gap;
 			color: #fff;
 			text-transform: uppercase;
 			i { margin-right: $gap; }
@@ -99,23 +99,23 @@ $navBtnSize: 20px;
 	.counter {
 		display: block;
 		background-color: color(blue);
-		font-size: 12px;
+		font-size: 12*$pt;
 		color: #fff;
 		position: absolute;
 		left: 0;
 		top: 0;
-		padding: 2px 4px;
+		padding: 2*$pt 4*$pt;
 		line-height: 1;
 	}
 
 	.nav-inline {
 		display: block;
-		font-size: 14px;
+		font-size: 14*$pt;
 		> li {
 			line-height: $navbarHeight;
 			> a:not(.btn) {
 				line-height: $navbarHeight;
-				padding: 0 16px;
+				padding: 0 $gap;
 				font-weight: 500;
 			}
 			.btn {
@@ -124,12 +124,12 @@ $navBtnSize: 20px;
 			}
 			.btn-flat {
 				line-height: $navbarHeight;
-				padding: 0 24px;
+				padding: 0 24*$pt;
 				border-radius: 0;
 			}
 		}
 	}
-	.list-with-icons i {width: 32px; display: inline-block; text-align: left;}
+	.list-with-icons i {width: 32*$pt; display: inline-block; text-align: left;}
 	.navbar-area {
 		position: relative;
 		clear: both;
@@ -142,7 +142,7 @@ $navBtnSize: 20px;
 			float: right;
 			height: $navbarHeight;
 			width: $navbarHeight;
-			font-size: 32px;
+			font-size: 32*$pt;
 			text-align: center;
 			line-height: $navbarHeight;
 			color: color(light);
@@ -228,7 +228,7 @@ header .nav-inline > li > a:not(.btn) {
 }
 
 .btn-nav-mobile {
-	font-size: 24px;
+	font-size: 24*$pt;
 	cursor: pointer;
 	vertical-align: middle;
 	line-height: $navbarHeight; 
@@ -243,7 +243,7 @@ header .nav-inline > li > a:not(.btn) {
 //CUSTOM ICON
 .icon-menu {
 	display: block;
-	width: $navBtnSize + 8px;
+	width: $navBtnSize + 8*$pt;
 	height: $navBtnSize;
 	margin: ($navbarHeight - $navBtnSize)/2 0;
 	position: relative;
@@ -251,12 +251,12 @@ header .nav-inline > li > a:not(.btn) {
 		position: absolute;
 		left: 0;
 		width: 100%;
-		height: 2px;
+		height: 2*$pt;
 		top: 0;
 		background-color: color(black);
 		& + span {
 			top: 50%;
-			margin-top: -1px;
+			margin-top: -1*$pt;
 		}
 		& + span + span {
 			top: auto;
@@ -268,7 +268,7 @@ header .nav-inline > li > a:not(.btn) {
 @media screen and (min-width: $md) {
 	.navbar-lg-lg {
 		.valign {
-			height: 100px;
+			height: 100*$pt;
 		}
 	}
 }

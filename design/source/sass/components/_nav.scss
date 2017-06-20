@@ -16,12 +16,12 @@
 .nav-inline li {
 	float: left;
 	a:not(.btn) {
-		padding: 0 8px;
+		padding: 0 8*$pt;
 	}
 }
 .nav-col li {
 	a:not(.btn) {
-		padding: 8px 0;
+		padding: 8*$pt 0;
 	}
 }
 

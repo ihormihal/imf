@@ -1,3 +1,7 @@
+html {
+	font-size: 16px; //rem size
+}
+
 body {
 	min-height: 100vh;
 	flex-direction: column;
@@ -26,4 +30,11 @@ ul {
 		flex-grow: 1;
 		position: relative;
 	}
+}
+
+@media screen and (min-width: $xl){
+	html { font-size: 20px; }
+}
+@media screen and (min-width: $xxl){
+	html { font-size: 16px; }
 }

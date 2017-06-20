@@ -41,12 +41,12 @@ body.fixed-footer {
 	}
 }
 .divider {
-	width: 40px;
+	width: 40*$pt;
 	height: 2px;
 	border: 0;
 	background-color: #000;
 	&.divider-lg {
-		width: 70px;
+		width: 70*$pt;
     	height: 4px;
 	}
 }
@@ -93,19 +93,19 @@ header {
 
 	}
 	&.circle-md {
-		height: 54px;
-		width: 54px;
-		line-height: 54px;
+		height: 54*$pt;
+		width: 54*$pt;
+		line-height: 54*$pt;
 		text-align: center;
 		font-size: 24px;
 	}
 	&.icon {
-		height: 72px;
-		width: 72px;
-		line-height: 72px;
+		height: 72*$pt;
+		width: 72*$pt;
+		line-height: 72*$pt;
 		vertical-align: middle;
 		text-align: center;
-		font-size: 32px;
+		font-size: 32*$pt;
 	}
 }
 
@@ -160,8 +160,8 @@ ul.list, ol.list {
 	list-style: none;
 	padding-left: 0;
 	li {
-		padding-bottom: 16px;
-		font-size: 16px;
+		padding-bottom: $gap;
+		//font-size: 16px;
 		&:last-child {
 			padding-bottom: 0;
 		}
@@ -184,13 +184,13 @@ ul.collection {
 	margin-left: 0;
 	> li {
 		float: none !important;
-		padding: 12px;
-		font-size: 12px;
+		padding: 12*$pt;
+		font-size: 12*$pt;
 	}
 }
 
 .label {
-	padding: 3px 5px;
+	padding: 3*$pt 5*$pt;
 	color: color(white);
 	display: inline-block;
     margin: 1px 0;

@@ -50,9 +50,9 @@
 			}
 		}
 		&.collection-padding {
-			padding: $gap 8px;
+			padding: $gap $gap/2;
 			> li {
-				padding: 0 8px;
+				padding: 0 $gap/2;
 				border: none;
 			}
 		}

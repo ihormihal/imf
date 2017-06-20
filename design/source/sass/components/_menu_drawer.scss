@@ -37,7 +37,7 @@ body.has-menu-drawer {
 		transition: padding-left 0.3s ease;
 
 		&.menu-drawer-opened {
-			padding-left: 280px;
+			padding-left: 280*$pt;
 
 			&:after {
 				display: none;

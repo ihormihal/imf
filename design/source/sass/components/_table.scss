@@ -1,6 +1,6 @@
 table {
 	td,th {
-		padding: 8px;
+		padding: 8*$pt;
 		border: 1px solid color(light);
 		&.nopadding {
 			padding: 0;
@@ -29,14 +29,14 @@ table {
 			td {
 				padding: 0;
 				border: none;
-				font-size: 16px;
-				padding-bottom: 16px;
+				//font-size: 16px;
+				padding-bottom: $gap;
 				&:first-child {
-					padding-right: 16px;
+					padding-right: $gap;
 				}
 				&:last-child {
 					text-align: right;
-					padding-left: 16px;
+					padding-left: $gap;
 				}
 			}
 		}

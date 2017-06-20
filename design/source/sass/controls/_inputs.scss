@@ -1,4 +1,4 @@
-$inlineInputs: 'textarea, select, input[type=text], input[type=search], input[type=email], input[type=password], input[type=date], input[type=number]';
+$inlineInputs: 'textarea, select, .select, input[type=text], input[type=search], input[type=email], input[type=password], input[type=date], input[type=number]';
 
 #{$inlineInputs} {
 	border: 1px solid color(light);
@@ -32,8 +32,8 @@ $inlineInputs: 'textarea, select, input[type=text], input[type=search], input[ty
 	}
 	&.default {
 		border-width: 1px;
-		padding-left: 8px;
-		padding-right: 8px;
+		padding-left: $gap/2;
+		padding-right: $gap/2;
 		background-color: #fff;
 		border-radius: $inputBorderRadius;
 		@if $inputShadow {
@@ -45,8 +45,8 @@ $inlineInputs: 'textarea, select, input[type=text], input[type=search], input[ty
 	}
 	&.transparent {
 		border-width: 1px;
-		padding-left: 8px;
-		padding-right: 8px;
+		padding-left: $gap/2;
+		padding-right: $gap/2;
 	}
 	//material style - animated underline
 	&.mt, &.mtr {
@@ -110,10 +110,10 @@ select, .select {
 textarea {
 	height: auto;
 	resize: vertical;
-	line-height: 22px;
+	line-height: 22*$pt;
 	&.default {
-		padding-top: 8px;
-		padding-bottom: 8px;
+		padding-top: $gap/2;
+		padding-bottom: $gap/2;
 	}
 }
 
@@ -161,8 +161,8 @@ input[type=file]{
 		position: absolute;
 		right: 0;
 		top: 0;
-		width: 16px;
-		line-height: 32px;
+		width: 16*$pt;
+		line-height: 32*$pt;
 		text-align: center;
 	}
 }
@@ -170,9 +170,9 @@ input[type=file]{
 .input-icon {
 	position: relative;
 	
-	input { padding-right: $textMD + 8px; }
+	> input, > select { padding-right: $textMD + $gap/2; }
 	//icon right (default)
-	.icon {
+	> .icon {
 		position: absolute;
 		top: 50%;
 		right: 0;
@@ -180,16 +180,16 @@ input[type=file]{
 		display: block;
 	}
 	&.default {
-		input { padding-right: $controlMD; }
-		.icon {
+		> input, > select { padding-right: $controlMD; }
+		> .icon {
 			text-align: center;
 			width: $controlMD;
 		}
 	}
 	&.icon-left {
-		input {
+		> input, > select {
 			padding-right: 0;
-			&.default { padding-right: 8px; }
+			&.default { padding-right: $gap/2; }
 		}
 	}
 	//icon sizes
@@ -200,13 +200,13 @@ input[type=file]{
 }
 
 .icon-left {
-	input {
-		padding-left: $textMD + 8px;
+	> input, > select {
+		padding-left: $textMD + $gap/2;
 		&.default { 
 			padding-left: $controlMD;
 		}
 	}
-	.icon {
+	> .icon {
 		right: inherit;
 		left: 0;
 	}
@@ -220,8 +220,8 @@ select, textarea, input:not([type="checkbox"]), input:not([type="radio"]) {
 	&.input-xl { height: $controlXL; font-size: $textXL; }
 }
 .input-icon {
-	.input-xs { padding: 0 $textXS + 8px; &.default { padding: 0 $controlXS; } }
-	.input-sm { padding: 0 $textSM + 8px; &.default { padding: 0 $controlSM; } }
-	.input-lg { padding: 0 $textLG + 8px; &.default { padding: 0 $controlLG; } }
-	.input-xl { padding: 0 $textXL + 8px; &.default { padding: 0 $controlXL; } }
+	.input-xs { padding: 0 $textXS + $gap/2; &.default { padding: 0 $controlXS; } }
+	.input-sm { padding: 0 $textSM + $gap/2; &.default { padding: 0 $controlSM; } }
+	.input-lg { padding: 0 $textLG + $gap/2; &.default { padding: 0 $controlLG; } }
+	.input-xl { padding: 0 $textXL + $gap/2; &.default { padding: 0 $controlXL; } }
 }
