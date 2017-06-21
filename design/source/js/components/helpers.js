@@ -30,11 +30,11 @@ $(function() {
 });
 
 $(document).on('focusin', '.floating-label input, .floating-label textarea', function(){
-	$('.floating-label').addClass('focus');
+	$(this).closest('.floating-label').addClass('focus');
 });
 $(document).on('focusout', '.floating-label input, .floating-label textarea', function(){
 	if($(this).val() == ''){
-		$('.floating-label').removeClass('focus');
+		$(this).closest('.floating-label').removeClass('focus');
 	}
 });
 /**** END Floating label HELPER ***/
