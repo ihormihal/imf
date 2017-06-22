@@ -33,3 +33,20 @@
 		right: 0;
 	}
 }
+
+ul.tree {
+	&, ul { list-style: none; }
+	ul {
+		margin-left: 20px;
+	}
+	i.fa {
+		margin-right: 10px;
+	}
+	span {
+		color: color(grey);
+		font-style: italic;
+		margin-left: 20px;
+		background-color: #fff;
+		padding: 0 5px;
+	}
+}

@@ -163,7 +163,7 @@
 										<td class="h3 green"><i class="mti">check_circle</i></td>
 										<td class="h3 red"><i class="mti">cancel</i></td>
 										<td class="h3 red"><i class="mti">cancel</i></td>
-										<td class="h3 red"><i class="mti">cancel</i> &minus; 10m</td>
+										<td class="h3 red"><i class="mti">cancel</i> &plusmn; 10m</td>
 										<td class="h3 red"><i class="mti">cancel</i> &plusmn; 10m</td>
 									</tr>
 									<tr>
@@ -187,7 +187,7 @@
 										<td class="h3 red"><i class="mti">cancel</i></td>
 										<td class="h3 red"><i class="mti">cancel</i></td>
 										<td class="h3 red"><i class="mti">cancel</i></td>
-										<td class="h3 red"><i class="mti">cancel</i></td>
+										<td class="h3 green"><i class="mti">check_circle</i></td>
 										<td class="h3 red"><i class="mti">cancel</i> вне н.п.</td>
 									</tr>
 								</tbody>

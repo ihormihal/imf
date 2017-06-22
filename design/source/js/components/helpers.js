@@ -6,7 +6,7 @@ $(document).on('click', '.input-icon i', function(event) {
 /**** END INPUT ICON HELPER ***/
 
 /**** FILEINPUT HELPER ****/
-$(document).on('change', '.fileinput input[type=file]', function(){
+$(document).on('change', '.fileinput input[type=file], .fileinput-btn input[type=file]', function(){
 	var str = $(this).val();
 	if (str.lastIndexOf('\\')){
 		var i = str.lastIndexOf('\\')+1;
@@ -14,7 +14,7 @@ $(document).on('change', '.fileinput input[type=file]', function(){
 		var i = str.lastIndexOf('/')+1;
 	}
 	var filename = str.slice(i);
-	$(this).closest('.fileinput').find('input[type=text]').val(filename);
+	$(this).closest('.fileinput, .fileinput-btn').find('input[type=text]').val(filename);
 });
 /**** END FILEINPUT HELPER ***/
 

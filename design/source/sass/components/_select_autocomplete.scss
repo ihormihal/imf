@@ -185,5 +185,10 @@ $selectionBtnH : ($controlMD - 0.25rem);
 				}
 			}
 		}
+		&.default {
+			> div {
+				margin: 2px;
+			}
+		}
 	}
 }

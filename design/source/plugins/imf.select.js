@@ -83,6 +83,13 @@
 			const searchInput = component.querySelector('input.search');
 			const selection = component.querySelector('.selection'); //for multiple
 
+			//add classes
+			if(selection){
+				selection.className = 'select selection '+select.className;
+			}else if(input){
+				input.className = 'select control '+select.className;
+			}
+
 
 			//mount component html
 			$(select).hide().after(component);
