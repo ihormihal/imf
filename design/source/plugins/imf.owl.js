@@ -57,13 +57,14 @@
 		});
 
 		//OWL Carousel custom nav
-		$('.owl-custom-nav').on('click', '.owl-prev, .owl-next', function(){
+		$('.owl-custom-nav').on('click', '.owl-prev, .owl-next', function(event){
+			event.preventDefault();
 			var target = $(this).parent('.owl-custom-nav').data('target');
-			var owl = $(target).data('owlCarousel');
+			var owl = $(target);
 			if($(this).hasClass('owl-prev')){
-				owl.prev();
+				owl.trigger('prev.owl.carousel');
 			}else if($(this).hasClass('owl-next')){
-				owl.next();
+				owl.trigger('next.owl.carousel');
 			}
 		});
 

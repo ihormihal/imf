@@ -3,7 +3,7 @@ var cssTransitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTrans
 //all images loaded
 $(window).on('load', function(){
 	//parallax
-	if($().imParallax) $('.parallax').imParallax();
+	if($().imfParallax) $('.parallax').imfParallax();
 });
 
 $('body').on(cssTransitionEnd, function(){
