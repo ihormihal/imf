@@ -212,6 +212,13 @@ input[type=file]{
 			&.default { padding-right: $gap/2; }
 		}
 	}
+
+	&.input-icon-aside {
+		> input { margin-right: $controlMD; width: calc(100% - #{$controlMD}); }
+		> .icon {
+			//position: static;
+		}
+	}
 	//icon sizes
 	.icon.icon-xs { width: $controlXS; font-size: $textXS; }
 	.icon.icon-sm { width: $controlSM; font-size: $textSM; }

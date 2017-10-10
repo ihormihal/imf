@@ -1,7 +1,8 @@
 /*** DROPDOWN ***/
-$(document).on('click', '.popup', function(event){
-	event.preventDefault();
-});
+// $(document).on('click', '.popup', function(event){
+// 	console.log('popup1');
+// });
+
 $(document).on('click', function(event){
 	var current = $(event.target).parents('.dropdown')[0];
 	$('.dropdown.active').each(function(){
@@ -17,3 +18,4 @@ $(document).on('click', '.dropdown .toggle', function(){
 	}
 });
 /*** END DROPDOWN ***/
+

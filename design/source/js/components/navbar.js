@@ -73,7 +73,7 @@ $(document).on('click', '#menu-drawer-toggle', function(event){
 	$('body').toggleClass('menu-drawer-opened');
 });
 $(document).on('click', function(event){
-	if($(event.target).hasClass('menu-drawer-opened')){
+	if(event.target.className.indexOf('menu-drawer-opened') !== -1){
 		$('body').removeClass('menu-drawer-opened');
 	}
 });
