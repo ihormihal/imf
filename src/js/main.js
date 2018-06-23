@@ -40,9 +40,9 @@ $(function() {
 	}
 
 	//OWL Carousel
-	if($().imfOwlCarousel){
-		$('.carousel').imfOwlCarousel({type: 'carousel'});
-		$('.slider').imfOwlCarousel({type: 'slider'});
+	if($().imfCarousel){
+		$('.carousel').imfCarousel({type: 'carousel'});
+		$('.slider').imfCarousel({type: 'slider'});
 	}
 	//Select autocomplete
 	if($().imfSelect) $('select.imf-select').imfSelect();

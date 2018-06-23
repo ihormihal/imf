@@ -3,7 +3,7 @@
 		<div class="row tile">
 			<div class="col-md-4">
 				<div class="logo mb2 text-sm-center">
-					<img height="60" src="design/images/dummy-logo.png" alt="">
+					<img height="60" src="content/images/dummy-logo.png" alt="">
 				</div>
 				<ul class="social-buttons mb2 text-sm-center">
 					<li><a href="#" class="facebook"><i class="mdi mdi-facebook"></i></a></li>

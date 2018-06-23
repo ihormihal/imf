@@ -12,7 +12,7 @@
 
 			<div class="slider slider-home owl-carousel" data-nav="true" data-pag="true">
 				<!-- repeat -->
-				<div class="item cover" style="background-image: url(design/images/banner.jpg)">
+				<div class="item cover" style="background-image: url(content/images/banner.jpg)">
 					<div class="container text-center white">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
@@ -28,7 +28,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="item cover" style="background-image: url(design/images/banner.jpg)">
+				<div class="item cover" style="background-image: url(content/images/banner.jpg)">
 					<div class="container text-center white">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
@@ -47,7 +47,7 @@
 				<!-- /repeat -->
 			</div>
 
-			<section class="primary-dark-bg pt4 pb4" style="background-image: url(design/images/bg-tr-img.png)">
+			<section class="primary-dark-bg pt4 pb4" style="background-image: url(content/images/bg-tr-img.png)">
 				<div class="container">
 					<div class="text-center mb4">
 						<h2 class="white up">Lorem ipsum dolor</h2>
@@ -109,7 +109,7 @@
 						<div class="col-lg-4 col-sm-6">
 							<div class="card-box hover-show-actions">
 								<div class="header image">
-									<img src="design/images/hotel.jpg" alt="title">
+									<img src="content/images/hotel.jpg" alt="title">
 								</div>
 								<div class="content">
 									<div class="box">
@@ -139,7 +139,7 @@
 				</div>
 			</section>
 
-			<section class="pt4 pb4 primary-dark-bg" style="background-image: url(design/images/bg-tr-img.png)">
+			<section class="pt4 pb4 primary-dark-bg" style="background-image: url(content/images/bg-tr-img.png)">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
@@ -167,7 +167,7 @@
 						<div class="row condensed">
 							<div class="col-md-6 wc">
 								<div class="col-content image">
-									<img src="design/images/venice.jpg" alt="title">
+									<img src="content/images/venice.jpg" alt="title">
 									<div class="triangle triangle-left"></div>
 								</div>
 							</div>
@@ -185,7 +185,7 @@
 						<div class="row condensed">
 							<div class="col-md-6 wc">
 								<div class="col-content image">
-									<img src="design/images/venice.jpg" alt="title">
+									<img src="content/images/venice.jpg" alt="title">
 									<div class="triangle triangle-left"></div>
 								</div>
 							</div>
@@ -206,7 +206,7 @@
 						<div class="row condensed reverse">
 							<div class="col-md-6 wc">
 								<div class="col-content image">
-									<img src="design/images/venice.jpg" alt="title">
+									<img src="content/images/venice.jpg" alt="title">
 									<div class="triangle triangle-right"></div>
 								</div>
 							</div>
@@ -224,7 +224,7 @@
 						<div class="row condensed reverse">
 							<div class="col-md-6 wc">
 								<div class="col-content image">
-									<img src="design/images/venice.jpg" alt="title">
+									<img src="content/images/venice.jpg" alt="title">
 									<div class="triangle triangle-right"></div>
 								</div>
 							</div>
@@ -250,7 +250,7 @@
 
 			<section>
 				<div class="row condensed">
-					<div class="col-md-5 dark-bg" style="background-image: url(design/images/bg-tr-img.png)">
+					<div class="col-md-5 dark-bg" style="background-image: url(content/images/bg-tr-img.png)">
 						<div class="pt4 pb4 pl2 pr2">
 							<div class="h1 white">About</div>
 							<hr class="divider primary-bg" />

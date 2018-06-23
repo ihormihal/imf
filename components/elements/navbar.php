@@ -9,7 +9,7 @@
 			<div class="col-md-3 col-xs-4">
 				<div class="valign">
 					<div class="logo full pt pb text-sm-center">
-						<img src="design/images/dummy-logo.png" alt="">
+						<img src="content/images/dummy-logo.png" alt="">
 					</div>
 				</div>
 			</div>

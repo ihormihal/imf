@@ -32,12 +32,12 @@ const vendorCss = [
 ];
 
 const plugins = [
-	'src/js/plugins/imf.gmap.js',
-  'src/js/plugins/imf.header.js',
-	'src/js/plugins/imf.owl.js',
-	'src/js/plugins/imf.parallax.js',
-	'src/js/plugins/imf.ripple.js',
-	'src/js/plugins/imf.select.js'
+	'src/js/jquery-plugins/imf.gmap.js',
+  'src/js/jquery-plugins/imf.header.js',
+	'src/js/jquery-plugins/imf.owl.js',
+	'src/js/jquery-plugins/imf.parallax.js',
+	'src/js/jquery-plugins/imf.ripple.js',
+	'src/js/jquery-plugins/imf.select.js'
 ];
 
 
@@ -97,7 +97,7 @@ gulp.task('plugins', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['src/js/main.js', 'src/js/components/*.js'])
+  return gulp.src(['src/js/main.js', 'src/js/jquery-components/*.js'])
   .pipe(sourcemaps.init())
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify(''))
@@ -109,8 +109,8 @@ gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['scss']);
   gulp.watch('src/img/**/*', ['img']);
   gulp.watch('src/fonts/**/*', ['fonts']);
-  gulp.watch('src/js/plugins/*', ['plugins']);
-  gulp.watch('src/js/scripts/**/*', ['scripts']);
+  gulp.watch('src/js/jquery-plugins/*', ['plugins']);
+  gulp.watch(['src/js/main.js', 'src/js/jquery-components/*.js'], ['scripts']);
   gulp.watch('config.json', ['config']);
 });
 

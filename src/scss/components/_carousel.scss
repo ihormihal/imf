@@ -35,27 +35,28 @@
 	}
 
 	.owl-nav {
+		color: #fff;
 		&.disabled {
 			display: none;
 		}
 		.owl-prev, .owl-next {
 			cursor: pointer;
 			position: absolute;
-			top: 0;
+			top: 50%;
 			z-index: 1000;
 			height: 50px;
 			width: 50px;
 			line-height: 50px;
+			margin-top: -25px;
 			text-align: center;
-			background-color: rgba(0,0,0,0.3);
-			color: color(white);
+			background-color: rgba(0,0,0,0.5);
 			transition: background-color 0.3s ease;
 			&:hover {
 				background-color: rgba(0,0,0,0.5);
 			}
 		}
 		.owl-prev {
-			right: 50px;
+			left: 0;
 		}
 		.owl-next {
 			right: 0;
