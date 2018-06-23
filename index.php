@@ -20,7 +20,7 @@
 									<div class="mb2">
 										<span class="both-lines h3 italic">Welcome!</span>
 									</div>
-									
+
 									<div class="huge mb1">Lorem ipsum dolor</div>
 									<p class="h3 white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 								</div>
@@ -36,7 +36,7 @@
 									<div class="mb2">
 										<span class="both-lines h3 italic">Welcome!</span>
 									</div>
-									
+
 									<div class="huge mb1">Lorem ipsum dolor</div>
 									<p class="h3 white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 								</div>
@@ -117,7 +117,7 @@
 										<div class="mb1">
 											<span class="btn-circle btn-sm btn-primary mr"><i class="fa fa-home"></i></span>
 											<span class="h4">
-												Lorem ipsum dolor 
+												Lorem ipsum dolor
 												<sup class="orange ml">
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -265,7 +265,7 @@
 							<div class="h1">Testimonials</div>
 							<hr class="divider primary-bg mb2" />
 
-							<div class="carousel owl-carousel nav-dark bottom-nav" 
+							<div class="carousel owl-carousel nav-dark bottom-nav"
 								data-pag="true" data-nav="false" data-margin="32" data-xl="2" data-md="2" data-sm="1">
 								<?php for ($i = 1; $i <= 6; $i++): ?>
 								<div class="owl-item">
@@ -285,7 +285,7 @@
 			</section>
 
 		</main>
-	
+
 		<footer>
 			<?php include 'components/footer.php'; ?>
 		</footer>
@@ -317,7 +317,7 @@
 					<label>E-mail</label>
 					<textarea rows="5" class="default full"></textarea>
 				</div>
-				
+
 				<div>
 					<button type="submit" class="btn btn-mt btn-primary">Submit</button>
 				</div>

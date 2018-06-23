@@ -1,0 +1,25 @@
+{
+  "name": "im-framework",
+  "description": "IM Framework",
+  "main": "index.php",
+  "authors": [
+    "Ihor Mykhalchenko"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ihormihal/imf",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "fancybox": "^3.3.5",
+    "air-datepicker": "^2.2.3",
+    "owl.carousel": "^2.3.4",
+    "mdi": "^2.4.85",
+    "fontawesome": "^5.1.0"
+  }
+}

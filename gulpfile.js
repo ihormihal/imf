@@ -1,109 +1,117 @@
 'use strict';
 
-const gulp  = require('gulp'),
-	sass      = require('gulp-sass'),
-	rename    = require('gulp-rename'),
-	concat    = require('gulp-concat'),
-	concatCss = require('gulp-concat-css'),
-	minifycss = require('gulp-minify-css'),
-	uglify    = require('gulp-uglifyjs'),
-	autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp'),
+  sourcemaps = require('gulp-sourcemaps'),
+  sass = require('gulp-sass'),
+  rename = require('gulp-rename'),
+  concat = require('gulp-concat'),
+  concatCss = require('gulp-concat-css'),
+  cleanCSS = require('gulp-clean-css'),
+  uglify = require('gulp-uglifyjs'),
+  autoprefixer = require('gulp-autoprefixer'),
+  fs = require('fs');
 
+const config = require('./config.json');
 
-/*** CONFIG ***/
-
-const srcDir  = './design/source';
-const vendorDir  = './design/vendor';
-const destDir = './design';
-
-const vendors = [
-	'jquery',
-	//'code',
-	'fancybox',
-	'owl2',
-	'air-datepicker',
-	//'spin',
-	//'toastr',
-	//'wow',
-	//'sektor'
+const vendorJs = [
+  './bower_components/jquery/dist/jquery.slim.min.js',
+  './bower_components/fancybox/dist/jquery.fancybox.min.js',
+  './bower_components/owl.carousel/dist/owl.carousel.min.js',
+  './bower_components/air-datepicker/dist/js/datepicker.min.js'
 ];
+const vendorFonts = [
+  './bower_components/mdi/fonts/materialdesignicons-webfont.woff',
+  './bower_components/mdi/fonts/materialdesignicons-webfont.woff2',
+  './bower_components/mdi/fonts/materialdesignicons-webfont.ttf'
+];
+const vendorCss = [
+  './bower_components/mdi/css/materialdesignicons.min.css',
+  './bower_components/fancybox/dist/jquery.fancybox.min.css',
+  './bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
+  './bower_components/air-datepicker/dist/css/datepicker.min.js'
+];
+
 const plugins = [
-	'imf.gmap',
-	//'imf.header',
-	'imf.owl',
-	'imf.parallax',
-	'imf.ripple',
-	'imf.select'
+	'src/js/plugins/imf.gmap.js',
+  'src/js/plugins/imf.header.js',
+	'src/js/plugins/imf.owl.js',
+	'src/js/plugins/imf.parallax.js',
+	'src/js/plugins/imf.ripple.js',
+	'src/js/plugins/imf.select.js'
 ];
 
 
-/*** GULP TASKS ***/
+const createPaths = () => {
+  if (!fs.existsSync("./dist/")) fs.mkdirSync("./dist/");
+  if (!fs.existsSync("./dist/js")) fs.mkdirSync("./dist/js");
+}
 
-//Vendor CSS
-gulp.task('vendorCss', function() {
-	var files = [];
-	for (var i = 0; i < vendors.length; i++) {
-		files.push(vendorDir+'/'+vendors[i]+'/*.css');
-	}
-	return gulp.src(files)
-	.pipe(concatCss("vendor.css"))
-	.pipe(minifycss(''))
-	.pipe(rename("vendor.min.css"))
-	.pipe(gulp.dest(destDir+'/css'));
+gulp.task('bower', () => {
+  gulp.src(vendorJs)
+  .pipe(concat('vendor.min.js'))
+  .pipe(gulp.dest('dist/js'));
+
+  gulp.src(vendorFonts)
+  .pipe(gulp.dest('dist/fonts'));
+
+  gulp.src(vendorCss)
+    .pipe(concatCss("vendor.min.css"))
+    .pipe(gulp.dest('dist/css'));
 });
 
-//Vendor JS
-gulp.task('vendorJs', function() {
-	var files = [];
-	for (var i = 0; i < vendors.length; i++) {
-		files.push(vendorDir+'/'+vendors[i]+'/*.js');
-	}
-	return gulp.src(files)
-	.pipe(concat('vendor.min.js'))
-	.pipe(uglify(''))
-	.pipe(gulp.dest(destDir+'/js'));
+gulp.task('scss', () => {
+  return gulp.src('src/scss/style.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compact',sourceMap: true}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 10'],
+    }))
+    .pipe(concatCss("style.min.css"))
+    .pipe(cleanCSS({compatibility: 'ie10'}))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/css'));
 });
 
-//combine to single task
-gulp.task('vendor', ['vendorCss','vendorJs']);
+gulp.task('config', () => {
+  createPaths()
+  fs.writeFile("./dist/js/config.js", `var CONFIG = ${JSON.stringify(config)};`, (err) => {
+    if (err) return console.log(err);
+  });
+});
 
-//Framework jQuery plugins
+gulp.task('img', () => {
+  return gulp.src('src/img/**/*')
+    .pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('fonts', () => {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('plugins', function() {
-	var files = [];
-	for (var i = 0; i < plugins.length; i++) {
-		files.push(srcDir+'/plugins/'+plugins[i]+'.js');
-	}
-	return gulp.src(files)
+	return gulp.src(plugins)
 	.pipe(concat('plugins.min.js'))
-	//.pipe(uglify(''))
-	.pipe(gulp.dest(destDir+'/js'));
+	.pipe(uglify(''))
+	.pipe(gulp.dest('dist/js'));
 });
 
-//Custom JS
 gulp.task('scripts', function() {
-	return gulp.src([srcDir+'/js/main.js', srcDir+'/js/components/*.js'])
+  return gulp.src(['src/js/main.js', 'src/js/components/*.js'])
+  .pipe(sourcemaps.init())
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify(''))
-	.pipe(gulp.dest(destDir+'/js'));
+  .pipe(sourcemaps.write())
+	.pipe(gulp.dest('dist/js'));
 });
 
-//All CSS
-gulp.task('sass', function () {
-	return gulp.src(srcDir+'/sass/**/*.scss')
-	.pipe(sass().on('error', sass.logError))
-	.pipe(concatCss("style.css"))
-	.pipe(autoprefixer({
-		browsers: ['last 2 versions'],
-	}))
-	.pipe(minifycss(''))
-	.pipe(rename("style.min.css"))
-	.pipe(gulp.dest(destDir+'/css'));
+gulp.task('watch', () => {
+  gulp.watch('src/scss/**/*.scss', ['scss']);
+  gulp.watch('src/img/**/*', ['img']);
+  gulp.watch('src/fonts/**/*', ['fonts']);
+  gulp.watch('src/js/plugins/*', ['plugins']);
+  gulp.watch('src/js/scripts/**/*', ['scripts']);
+  gulp.watch('config.json', ['config']);
 });
 
-gulp.task('watch', function () {
-	gulp.watch(srcDir+'/sass/**/*.scss', ['sass']);
-	gulp.watch(srcDir+'/plugins/**/*.js', ['plugins']);
-	gulp.watch(srcDir+'/js/**/*.js', ['scripts']);
-});
-
-gulp.task('default', ['vendorCss','vendorJs','plugins','scripts','sass']);
+gulp.task('build', ['bower', 'config', 'scss', 'img', 'fonts', 'plugins', 'scripts']);
