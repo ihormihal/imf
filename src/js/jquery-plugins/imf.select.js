@@ -41,7 +41,7 @@
 				var searchWrapper = '<div class="search-wrapper">'+
 					'<div class="input-icon">'+
 						'<input class="search mtr full" type="text" placeholder="'+searchPlaceholder+'">'+
-						'<i class="icon light fa fa-search"></i>'+
+						'<i class="icon light mdi mdi-search"></i>'+
 					'</div>'+
 				'</div>';
 

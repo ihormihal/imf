@@ -25,7 +25,7 @@
 				<label>Дата</label>
 				<div class="input-icon default">
 					<input class="default full noborder" type="text" placeholder="Не выбрана">
-					<i class="icon fa fa-calendar"></i>
+					<i class="icon mdi mdi-calendar"></i>
 				</div>
 			</div>
 		</div>

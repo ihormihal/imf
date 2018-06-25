@@ -110,7 +110,7 @@
                     if(values[i].icon){
                        iconHtml =  '<img class="icon" src="' + values[i].icon + '">';
                     }
-                    that.el.append('<div data-value="'+values[i].value+'" class="item">'+iconHtml+values[i].text+'<i class="fa fa-times"></i></div>');
+                    that.el.append('<div data-value="'+values[i].value+'" class="item">'+iconHtml+values[i].text+'<i class="mdi mdi-times"></i></div>');
                 }
             };
             
@@ -216,14 +216,14 @@
             if(multiple){
                 template.innerHTML = '<div class="imf-select">'+
                     '<div class="select">'+placeholder+'</div>' +
-                    '<div class="popup full multiple"><div class="search-wrapper"><div class="input-icon"><input class="mtr search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon light fa fa-search"></i></div></div>' +
+                    '<div class="popup full multiple"><div class="search-wrapper"><div class="input-icon"><input class="mtr search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon light mdi mdi-search"></i></div></div>' +
                             '<ul class="collection">'+ collection +'</ul>' +
                         '</div>'+
                     '</div>';
             }else{
                 template.innerHTML = '<div class="imf-select">'+
                     '<input class="'+inputClassName+'" type="text" readonly placeholder="'+placeholder+'">' + '<div class="icon">' + iconHtml + '</div>' +
-                    '<div class="popup full"><div class="search-wrapper"><div class="input-icon"><input class="mtr search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon light fa fa-search"></i></div></div>' +
+                    '<div class="popup full"><div class="search-wrapper"><div class="input-icon"><input class="mtr search full" type="text" placeholder="'+searchPlaceholder+'"><i class="icon light mdi mdi-search"></i></div></div>' +
                         '<ul class="collection">'+ collection +'</ul>' +
                     '</div>'+
                 '</div>';

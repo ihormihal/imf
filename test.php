@@ -15,7 +15,7 @@
 
         <div id="menu-drawer" class="menu-drawer dark-bg">
             <nav class="nav-side">
-                <ul class="nav nav-col"><li class="first"><a class="ripple" href="imf/grid"><i class="fa fa-align-left"></i> Grid</a></li><li><a class="ripple" href="imf/helpers"><i class="fa fa-book"></i> Helpers</a></li><li><a class="ripple" href="imf/colors"><i class="fa fa-paint-brush"></i> Colors</a></li><li><a class="ripple" href="imf/typography"><i class="fa fa-text-height"></i> Typography</a></li><li><a class="ripple" href="imf/buttons"><i class="fa fa-hand-pointer-o"></i> Buttons</a></li><li><a class="ripple" href="imf/form"><i class="fa fa-sliders"></i> Form elements</a></li><li class="last active"><a class="ripple" href="imf/table"><i class="fa fa-table"></i> Table</a></li></ul>
+                <ul class="nav nav-col"><li class="first"><a class="ripple" href="imf/grid"><i class="mdi mdi-align-left"></i> Grid</a></li><li><a class="ripple" href="imf/helpers"><i class="mdi mdi-book"></i> Helpers</a></li><li><a class="ripple" href="imf/colors"><i class="mdi mdi-paint-brush"></i> Colors</a></li><li><a class="ripple" href="imf/typography"><i class="mdi mdi-text-height"></i> Typography</a></li><li><a class="ripple" href="imf/buttons"><i class="mdi mdi-hand-pointer-o"></i> Buttons</a></li><li><a class="ripple" href="imf/form"><i class="mdi mdi-sliders"></i> Form elements</a></li><li class="last active"><a class="ripple" href="imf/table"><i class="mdi mdi-table"></i> Table</a></li></ul>
             </nav>
         </div>
 
@@ -69,7 +69,7 @@
                             <div class="row tile">
                                 <div class="col-sm-4">
                                     <div class="btn-circle full btn-primary">
-                                        <i class="fa fa-home"></i>
+                                        <i class="mdi mdi-home"></i>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
@@ -82,7 +82,7 @@
                             <div class="row tile">
                                 <div class="col-sm-4">
                                     <div class="btn-circle full btn-primary">
-                                        <i class="fa fa-home"></i>
+                                        <i class="mdi mdi-home"></i>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
@@ -95,7 +95,7 @@
                             <div class="row tile">
                                 <div class="col-sm-4">
                                     <div class="btn-circle full btn-primary">
-                                        <i class="fa fa-home"></i>
+                                        <i class="mdi mdi-home"></i>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
@@ -126,14 +126,14 @@
                                     <div class="box">
                                         <h3 class="title primary">The title</h3>
                                         <div class="mb1">
-                                            <span class="btn-circle btn-sm btn-primary mr"><i class="fa fa-home"></i></span>
+                                            <span class="btn-circle btn-sm btn-primary mr"><i class="mdi mdi-home"></i></span>
                                             <span class="h4">
                                                 Lorem ipsum dolor 
                                                 <sup class="orange ml">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
+                                                    <i class="mdi mdi-star"></i>
+                                                    <i class="mdi mdi-star"></i>
+                                                    <i class="mdi mdi-star"></i>
+                                                    <i class="mdi mdi-star"></i>
                                                 </sup>
                                             </span>
                                         </div>

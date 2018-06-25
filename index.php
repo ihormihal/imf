@@ -58,7 +58,7 @@
 							<div class="row tile">
 								<div class="col-sm-4">
 									<div class="btn-circle full btn-primary">
-										<i class="fa fa-home"></i>
+										<i class="mdi mdi-home"></i>
 									</div>
 								</div>
 								<div class="col-sm-8">
@@ -71,7 +71,7 @@
 							<div class="row tile">
 								<div class="col-sm-4">
 									<div class="btn-circle full btn-primary">
-										<i class="fa fa-home"></i>
+										<i class="mdi mdi-home"></i>
 									</div>
 								</div>
 								<div class="col-sm-8">
@@ -84,7 +84,7 @@
 							<div class="row tile">
 								<div class="col-sm-4">
 									<div class="btn-circle full btn-primary">
-										<i class="fa fa-home"></i>
+										<i class="mdi mdi-home"></i>
 									</div>
 								</div>
 								<div class="col-sm-8">
@@ -115,14 +115,14 @@
 									<div class="box">
 										<h3 class="title primary">The title</h3>
 										<div class="mb1">
-											<span class="btn-circle btn-sm btn-primary mr"><i class="fa fa-home"></i></span>
+											<span class="btn-circle btn-sm btn-primary mr"><i class="mdi mdi-home"></i></span>
 											<span class="h4">
 												Lorem ipsum dolor
 												<sup class="orange ml">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+													<i class="mdi mdi-star"></i>
+													<i class="mdi mdi-star"></i>
+													<i class="mdi mdi-star"></i>
+													<i class="mdi mdi-star"></i>
 												</sup>
 											</span>
 										</div>
@@ -268,7 +268,7 @@
 							<div class="carousel owl-carousel nav-dark bottom-nav"
 								data-pag="true" data-nav="false" data-margin="32" data-xl="2" data-md="2" data-sm="1">
 								<?php for ($i = 1; $i <= 6; $i++): ?>
-								<div class="owl-item">
+								<div class="item">
 									<div class="h4 primary">Name</div>
 									<div class="grey">28 years</div>
 

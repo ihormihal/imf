@@ -38,6 +38,7 @@
 			}else if(settings.type == 'slider'){
 				params.items = 1;
 				el.on('translate.owl.carousel', function(event) {
+					console.log(event)
 					var currentIndex = event.item.index;
 					var slides = el.find('.owl-item');
 					slides.each(function(index){

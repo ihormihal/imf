@@ -44,7 +44,7 @@
 								<label>Simple input with icon</label>
 								<div class="input-icon">
 									<input class="full" type="text" placeholder="Placeholder">
-									<i class="icon fa fa-calendar"></i>
+									<i class="icon mdi mdi-calendar"></i>
 								</div>
 							</div>
 
@@ -73,7 +73,7 @@
 									<option value="">Second</option>
 									<option value="">Third</option>
 								</select>
-								<a href="javascript:void(0)" class="btn btn-mt btn-success ripple"><i class="fa fa-plus"></i>Add new</a>
+								<a href="javascript:void(0)" class="btn btn-mt btn-success ripple"><i class="mdi mdi-plus"></i>Add new</a>
 							</div>
 
 						</div>
@@ -92,7 +92,7 @@
 								<label>Simple input with icon</label>
 								<div class="input-icon default">
 									<input class="default full" type="text" placeholder="Placeholder">
-									<i class="icon fa fa-calendar"></i>
+									<i class="icon mdi mdi-calendar"></i>
 								</div>
 							</div>
 
@@ -221,7 +221,7 @@
 							</div>
 
 							<div class="form-group">
-								<label for="">Select autocomplete <a class="show-code" href="#select-autocomplete-code"><i class="fa fa-code"></i></a></label>
+								<label for="">Select autocomplete <a class="show-code" href="#select-autocomplete-code"><i class="mdi mdi-code"></i></a></label>
 								<select multiple id="test" class="imf-select full" data-search-placeholder="Search..." name="country" placeholder="Select country...">
 									<?php foreach ($countries as $key => $country): ?>
 									<option value="<?php echo $country['code']; ?>" <?php if ($country['code'] == 'UA' || $country['code'] == 'RU'): ?>selected<?php endif ?> ><?php echo $country['name']; ?></option>
@@ -230,7 +230,7 @@
 							</div>
 
 							<!-- <div class="form-group">
-								<label for="">Select autocomplete with icons <a class="show-code" href="#select-autocomplete-icon-code"><i class="fa fa-code"></i></a></label>
+								<label for="">Select autocomplete with icons <a class="show-code" href="#select-autocomplete-icon-code"><i class="mdi mdi-code"></i></a></label>
 								<select class="imf-select full" data-search-placeholder="Search..." name="country" placeholder="Select country...">
 									<option value="">Empty</option>
 									<?php foreach ($countries as $key => $country): ?>
@@ -250,7 +250,7 @@
 							</div>
 
 							<div class="form-group">
-								<label for="">Select autocomplete (multiple) <a class="show-code" href="#select-multiple-code"><i class="fa fa-code"></i></a></label>
+								<label for="">Select autocomplete (multiple) <a class="show-code" href="#select-multiple-code"><i class="mdi mdi-code"></i></a></label>
 								<select id="ss" class="multiselect full" data-search-placeholder="Search..." name="countries" placeholder="Select countries..." multiple>
 									<?php foreach ($countries as $key => $country): ?>
 									<option <?php if($country['name'] == 'Morocco') echo 'selected' ?> value="<?php echo $country['code']; ?>"><?php echo $country['name']; ?></option>
@@ -259,7 +259,7 @@
 							</div>
 
 							<div class="form-group">
-								<label for="">Select autocomplete (multiple) with icons <a class="show-code" href="#select-multiple-icon-code"><i class="fa fa-code"></i></a></label>
+								<label for="">Select autocomplete (multiple) with icons <a class="show-code" href="#select-multiple-icon-code"><i class="mdi mdi-code"></i></a></label>
 								<select class="multiselect full" data-search-placeholder="Search..." name="countries" placeholder="Select countries..." multiple>
 									<?php foreach ($countries as $key => $country): ?>
 									<option data-icon="design/img/pin.png" <?php if($country['name'] == 'Morocco') echo 'selected' ?> value="<?php echo $country['code']; ?>"><?php echo $country['name']; ?></option>

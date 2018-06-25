@@ -64,10 +64,10 @@
 							<h3>Social networks</h3>
 							<div class="text-subline"></div>
 							<ul class="social-buttons mb2">
-								<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-								<li><a href="#" class="vkontakte"><i class="fa fa-vk"></i></a></li>
+								<li><a href="#" class="facebook"><i class="mdi mdi-facebook"></i></a></li>
+								<li><a href="#" class="google"><i class="mdi mdi-google-plus"></i></a></li>
+								<li><a href="#" class="instagram"><i class="mdi mdi-instagram"></i></a></li>
+								<li><a href="#" class="vkontakte"><i class="mdi mdi-vk"></i></a></li>
 							</ul>
 
 							<div class="mt4"></div>
@@ -75,7 +75,7 @@
 							<h3>Phones</h3>
 							<div class="text-subline"></div>
 							<div class="mb1 nowrap">
-								<span class="btn-circle btn-primary mr"><i class="fa fa-phone"></i></span>
+								<span class="btn-circle btn-primary mr"><i class="mdi mdi-phone"></i></span>
 								<a class="black" href="tel:380734058015">(073)4058015</a>
 							</div>
 
@@ -84,7 +84,7 @@
 							<h3>Address</h3>
 							<div class="text-subline"></div>
 							<div class="mb1 nowrap">
-								<span class="btn-circle btn-primary mr"><i class="fa fa-map-marker"></i></span>
+								<span class="btn-circle btn-primary mr"><i class="mdi mdi-map-marker"></i></span>
 								<a class="black" href="#">Kiev, Zlatoustovskaya str. 2/4</a>
 							</div>
 
@@ -93,7 +93,7 @@
 							<h3>E-mail</h3>
 							<div class="text-subline"></div>
 							<div class="mb1 nowrap">
-								<span class="btn-circle btn-primary mr"><i class="fa fa-envelope"></i></span>
+								<span class="btn-circle btn-primary mr"><i class="mdi mdi-envelope"></i></span>
 								<a class="primary" href="mailto:ihor.mihal@gmail.com">ihor.mihal@gmail.com</a>
 							</div>
 

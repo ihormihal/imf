@@ -76,15 +76,15 @@
 					<h3>Social Buttons</h3>
 
 					<div class="mt1 mb1 social-buttons">
-						<a href="javascript:void(0)" class="facebook"><i class="fa fa-facebook"></i></a>
-						<a href="javascript:void(0)" class="vkontakte"><i class="fa fa-vk"></i></a>
-						<a href="javascript:void(0)" class="linkedin"><i class="fa fa-linkedin"></i></a>
-						<a href="javascript:void(0)" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="javascript:void(0)" class="pinterest"><i class="fa fa-pinterest"></i></a>
-						<a href="javascript:void(0)" class="youtube"><i class="fa fa-youtube"></i></a>
-						<a href="javascript:void(0)" class="google"><i class="fa fa-google-plus"></i></a>
-						<a href="javascript:void(0)" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="javascript:void(0)" class="foursquare"><i class="fa fa-foursquare"></i></a>
+						<a href="javascript:void(0)" class="facebook"><i class="mdi mdi-facebook"></i></a>
+						<a href="javascript:void(0)" class="vkontakte"><i class="mdi mdi-vk"></i></a>
+						<a href="javascript:void(0)" class="linkedin"><i class="mdi mdi-linkedin"></i></a>
+						<a href="javascript:void(0)" class="twitter"><i class="mdi mdi-twitter"></i></a>
+						<a href="javascript:void(0)" class="pinterest"><i class="mdi mdi-pinterest"></i></a>
+						<a href="javascript:void(0)" class="youtube"><i class="mdi mdi-youtube"></i></a>
+						<a href="javascript:void(0)" class="google"><i class="mdi mdi-google-plus"></i></a>
+						<a href="javascript:void(0)" class="instagram"><i class="mdi mdi-instagram"></i></a>
+						<a href="javascript:void(0)" class="foursquare"><i class="mdi mdi-foursquare"></i></a>
 					</div>
 
 					<h3>a, button, input[type=button]</h3>
@@ -99,7 +99,7 @@
 			</section>
 
 		</main>
-	
+
 		<footer>
 			<?php include 'components/footer.php'; ?>
 		</footer>
