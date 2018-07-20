@@ -61,9 +61,9 @@
 			var target = $(this).parent('.owl-custom-nav').data('target');
 			var owl = $(target).data('owlCarousel');
 			if($(this).hasClass('owl-prev')){
-				owl.prev();
+				owl.trigger('prev.owl.carousel');
 			}else if($(this).hasClass('owl-next')){
-				owl.next();
+				owl.trigger('next.owl.carousel');
 			}
 		});
 
