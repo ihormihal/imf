@@ -90,13 +90,20 @@ Menu.initiate = function() {
 }
 
 Menu.showMobile = function () {
+	if(Menu.isVisible) return;
+
 	Menu.isVisible = true
+	console.log('showMobile')
 	Menu.container.innerHTML = '';
 	document.body.appendChild(Menu.mobile);
 	$('body').addClass('has-menu-drawer');
 }
 
 Menu.hideMobile = function () {
+	if(!Menu.isVisible) return;
+	
+	Menu.isVisible = false
+	console.log('hideMobile')
 	$('#menu-drawer-container').remove();
 	Menu.container.appendChild(Menu.desctop);
 	$('body').removeClass('has-menu-drawer');
