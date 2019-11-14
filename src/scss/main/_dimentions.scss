@@ -17,7 +17,7 @@
 .pb {padding-bottom: 0.5*$gap;}
 .pr {padding-right: 0.5*$gap;}
 .pl {padding-left: 0.5*$gap;}
-@for $i from 1 through 8 {
+@for $i from 1 through 4 {
 	.m#{$i} {
 		margin: $gap*$i;
 	}
@@ -49,29 +49,3 @@
 		padding-bottom: $gap*$i;
 	}
 }
-//POSITION CLASSES
-.fixed, .absolute {
-	&.fh {
-		top: 0;
-		bottom: 0;
-	}
-	&.fill {
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	&.top-left {top: 0; left: 0;}
-	&.top-right {top: 0; right: 0;}
-	&.bottom-left {bottom: 0; left: 0;}
-	&.bottom-right {bottom: 0; right: 0;}
-	&.z0 {z-index: 0;}
-	&.z1 {z-index: 1;}
-	&.z100 {z-index: 100;}
-	&.z1000 {z-index: 1000;}
-	&.z9999 {z-index: 9999;}
-}
-.fixed {position: fixed;}
-.absolute {position: absolute;}
-.relative {position: relative;}
-.hidden {display: none;}
